@@ -1,0 +1,1486 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef1"
+            },
+            "AccountId": "@AccountRef20",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef2"
+            },
+            "AccountId": "@AccountRef20",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef3"
+            },
+            "AccountId": "@AccountRef21",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef4"
+            },
+            "AccountId": "@AccountRef21",
+            "Origin": "Chat",
+            "Priority": "Medium",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef5"
+            },
+            "AccountId": "@AccountRef22",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef6"
+            },
+            "AccountId": "@AccountRef22",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef7"
+            },
+            "AccountId": "@AccountRef23",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef8"
+            },
+            "AccountId": "@AccountRef23",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef9"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef10"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef11"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Chat",
+            "Priority": "Medium",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef12"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef13"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef14"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef15"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef16"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef17"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "On Hold",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef18"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "High",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef19"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef20"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Installation",
+            "Status": "Working",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef21"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef22"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Other",
+            "Status": "Attention",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef23"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Working",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef24"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef25"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef26"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef27"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef28"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "High",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef29"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef30"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef31"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef32"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef33"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef34"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef35"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Chat",
+            "Priority": "High",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef36"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef37"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef38"
+            },
+            "AccountId": "@AccountRef24",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef39"
+            },
+            "AccountId": "@AccountRef58",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef40"
+            },
+            "AccountId": "@AccountRef58",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef41"
+            },
+            "AccountId": "@AccountRef59",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef42"
+            },
+            "AccountId": "@AccountRef59",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef43"
+            },
+            "AccountId": "@AccountRef60",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef44"
+            },
+            "AccountId": "@AccountRef60",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef45"
+            },
+            "AccountId": "@AccountRef61",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef46"
+            },
+            "AccountId": "@AccountRef61",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef47"
+            },
+            "AccountId": "@AccountRef62",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef48"
+            },
+            "AccountId": "@AccountRef62",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef49"
+            },
+            "AccountId": "@AccountRef63",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef50"
+            },
+            "AccountId": "@AccountRef63",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef51"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef52"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef53"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef54"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef55"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef56"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef57"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Accessories",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef58"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef59"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef60"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "High",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef61"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef62"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef63"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef64"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Chat",
+            "Priority": "High",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef65"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Tablets",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef66"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Phones",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef67"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Phones",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef68"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "High",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Phones",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef69"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "High",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef70"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Chat",
+            "Priority": "Medium",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef71"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef72"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef73"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef74"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef75"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef76"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Equipment Design",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef77"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef78"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "High",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef79"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef80"
+            },
+            "AccountId": "@AccountRef64",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef81"
+            },
+            "AccountId": "@AccountRef96",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef82"
+            },
+            "AccountId": "@AccountRef96",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef83"
+            },
+            "AccountId": "@AccountRef97",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef84"
+            },
+            "AccountId": "@AccountRef97",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef85"
+            },
+            "AccountId": "@AccountRef98",
+            "Origin": "Phone",
+            "Priority": "High",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef86"
+            },
+            "AccountId": "@AccountRef98",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef87"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef88"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef89"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef90"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef91"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef92"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef93"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef94"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Feedback",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef95"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef96"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Chat",
+            "Priority": "Medium",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef97"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef98"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef99"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef100"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef101"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef102"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef103"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Low",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef104"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef105"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Equipment Complexity",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef106"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef107"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Other",
+            "Status": "Closed",
+            "Subject": "Case about Laptops",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef108"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Web",
+            "Priority": "Medium",
+            "Reason": "Breakdown",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef109"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Low",
+            "Reason": "Breakdown",
+            "Status": "Attention",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef110"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Working",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef111"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Phone",
+            "Priority": "Medium",
+            "Reason": "Performance",
+            "Status": "Working",
+            "Subject": "Case about Digital Media",
+            "Type": "Question"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef112"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Email",
+            "Priority": "Low",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef113"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Chat",
+            "Priority": "Low",
+            "Reason": "Performance",
+            "Status": "Waiting on Customer",
+            "Subject": "Case about Digital Media",
+            "Type": "Feature Request"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef114"
+            },
+            "AccountId": "@AccountRef99",
+            "Origin": "Email",
+            "Priority": "Medium",
+            "Reason": "Installation",
+            "Status": "Closed",
+            "Subject": "Case about Digital Media",
+            "Type": "Problem"
+        }
+    ]
+}

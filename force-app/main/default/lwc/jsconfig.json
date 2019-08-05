@@ -1,8 +1,15 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/orgStorageCountHome": [
+                "orgStorageCountHome/orgStorageCountHome.js"
+            ],
+            "c/scratchOrgDetailsHome": [
+                "scratchOrgDetailsHome/scratchOrgDetailsHome.js"
+            ]
+        },
+        "experimentalDecorators": true
     },
     "include": [
         "**/*",

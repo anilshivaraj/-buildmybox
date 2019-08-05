@@ -1,0 +1,802 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef1"
+            },
+            "AccountId": "@AccountRef20",
+            "Amount": 493255,
+            "LeadSource": "Public Relations",
+            "Name": "Opportunity for Becker94",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business",
+            "CloseDate": "2017-05-26"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef2"
+            },
+            "AccountId": "@AccountRef21",
+            "Amount": 19640,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Hughes209",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "Existing Business",
+            "CloseDate": "2018-01-29"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef3"
+            },
+            "AccountId": "@AccountRef22",
+            "Amount": 202174,
+            "LeadSource": "Seminar - Internal",
+            "Name": "Opportunity for Aguilar210",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2018-01-11"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef4"
+            },
+            "AccountId": "@AccountRef23",
+            "Amount": 2177800,
+            "LeadSource": "Trade Show",
+            "Name": "Opportunity for Lopez212",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2018-04-17"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef5"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 720875,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Higgins1229",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-02-20"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef6"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 368530,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Paul1228",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2018-05-02"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef7"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 1207960,
+            "LeadSource": "Seminar - Internal",
+            "Name": "Opportunity for Young1227",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-05-25"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef8"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 4561,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Romero1224",
+            "Probability": 70,
+            "StageName": "Perception Analysis",
+            "Type": "New Business",
+            "CloseDate": "2018-09-28"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef9"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 2454990,
+            "LeadSource": "Word of mouth",
+            "Name": "Opportunity for Brown1230",
+            "Probability": 10,
+            "StageName": "Qualification",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-09-22"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef10"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 2855840,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Bass1237",
+            "Probability": 10,
+            "StageName": "Qualification",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-12-06"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef11"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 65070,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Barton1587",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2017-12-07"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef12"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 65920,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Howard1588",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-04-22"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef13"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 32480,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Spencer1223",
+            "Probability": 70,
+            "StageName": "Perception Analysis",
+            "Type": "New Business",
+            "CloseDate": "2018-09-04"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef14"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 640000,
+            "LeadSource": "Advertisement",
+            "Name": "Opportunity for Guzman213",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-02-16"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef15"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 1405500,
+            "LeadSource": "Word of mouth",
+            "Name": "Opportunity for Hughes845",
+            "Probability": 20,
+            "StageName": "Needs Analysis",
+            "Type": "New Business",
+            "CloseDate": "2018-06-27"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef16"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 240260,
+            "LeadSource": "Public Relations",
+            "Name": "Opportunity for Gomez846",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2017-04-04"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef17"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 329425,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Weber1216",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2017-12-11"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef18"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 409240,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Bishop1217",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2017-10-26"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef19"
+            },
+            "AccountId": "@AccountRef24",
+            "Amount": 2887700,
+            "LeadSource": "Advertisement",
+            "Name": "Opportunity for Carpenter1221",
+            "Probability": 75,
+            "StageName": "Proposal/Price Quote",
+            "Type": "New Business",
+            "CloseDate": "2018-06-12"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef20"
+            },
+            "AccountId": "@AccountRef58",
+            "Amount": 2340210,
+            "LeadSource": "Advertisement",
+            "Name": "Opportunity for Barber186",
+            "Probability": 10,
+            "StageName": "Qualification",
+            "Type": "New Business",
+            "CloseDate": "2018-09-03"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef21"
+            },
+            "AccountId": "@AccountRef59",
+            "Amount": 449438,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Howard1207",
+            "Probability": 50,
+            "StageName": "Value Proposition",
+            "Type": "New Business",
+            "CloseDate": "2018-12-13"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef22"
+            },
+            "AccountId": "@AccountRef60",
+            "Amount": 1639550,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Murray1210",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-01-11"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef23"
+            },
+            "AccountId": "@AccountRef61",
+            "Amount": 580000,
+            "LeadSource": "Advertisement",
+            "Name": "Opportunity for Wagner1214",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2017-11-03"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef24"
+            },
+            "AccountId": "@AccountRef62",
+            "Amount": 342886,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Thomas1215",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2017-06-10"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef25"
+            },
+            "AccountId": "@AccountRef63",
+            "Amount": 7425,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Yates1567",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business",
+            "CloseDate": "2018-02-11"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef26"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 1241390,
+            "LeadSource": "Seminar - Internal",
+            "Name": "Opportunity for Murphy1963",
+            "Probability": 90,
+            "StageName": "Negotiation/Review",
+            "Type": "New Business",
+            "CloseDate": "2018-10-11"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef27"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 3392500,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Carson1966",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business",
+            "CloseDate": "2017-10-13"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef28"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 2208300,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Perez1775",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-09-25"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef29"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 1540000,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Bush1960",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business",
+            "CloseDate": "2018-01-25"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef30"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 198000,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Curtis1571",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2018-03-11"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef31"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 3990000,
+            "LeadSource": "Public Relations",
+            "Name": "Opportunity for Williamson1573",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-03-02"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef32"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 122651,
+            "LeadSource": "Trade Show",
+            "Name": "Opportunity for Goodwin1575",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-05-24"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef33"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 119967,
+            "LeadSource": "Seminar - Internal",
+            "Name": "Opportunity for Sims1582",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-11-02"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef34"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 2008900,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Campbell1583",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-12-04"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef35"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 1728950,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Lamb1584",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "Existing Business",
+            "CloseDate": "2018-02-27"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef36"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 127600,
+            "LeadSource": "Advertisement",
+            "Name": "Opportunity for Bates1952",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-11-22"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef37"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 171660,
+            "LeadSource": "Seminar - Internal",
+            "Name": "Opportunity for Webster1954",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2018-05-18"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef38"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 446461,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Cobb1955",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-04-27"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef39"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 421000,
+            "LeadSource": "Public Relations",
+            "Name": "Opportunity for Harper1957",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2018-05-26"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef40"
+            },
+            "AccountId": "@AccountRef64",
+            "Amount": 1052275,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Stone1959",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-03-26"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef41"
+            },
+            "AccountId": "@AccountRef96",
+            "Amount": 1498260,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Kelley1593",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business",
+            "CloseDate": "2018-03-05"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef42"
+            },
+            "AccountId": "@AccountRef97",
+            "Amount": 140105,
+            "LeadSource": "Word of mouth",
+            "Name": "Opportunity for Wood1594",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "New Business",
+            "CloseDate": "2018-02-22"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef43"
+            },
+            "AccountId": "@AccountRef98",
+            "Amount": 4824325,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for Alvarado1597",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-02-09"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef44"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 63600,
+            "LeadSource": "Word of mouth",
+            "Name": "Opportunity for Duncan681",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-06-15"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef45"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 2684465,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Brown672",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2017-12-10"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef46"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 875880,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Nelson1799",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2017-11-22"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef47"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 2728890,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Stevenson670",
+            "Probability": 50,
+            "StageName": "Value Proposition",
+            "Type": "New Business",
+            "CloseDate": "2018-12-06"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef48"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 3251640,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Luna668",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-01-19"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef49"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 736250,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Perkins665",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2017-06-25"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef50"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 25450,
+            "LeadSource": "Trade Show",
+            "Name": "Opportunity for Cunningham662",
+            "Probability": 75,
+            "StageName": "Proposal/Price Quote",
+            "Type": "New Business",
+            "CloseDate": "2018-10-23"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef51"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 1784100,
+            "LeadSource": "Seminar - Internal",
+            "Name": "Opportunity for Erickson659",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-10-15"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef52"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 252545,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Pittman658",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2017-07-30"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef53"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 54090,
+            "LeadSource": "Employee Referral",
+            "Name": "Opportunity for Pena1800",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-06-16"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef54"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 680,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Colon1047",
+            "Probability": 50,
+            "StageName": "Value Proposition",
+            "Type": "New Business / Add-on",
+            "CloseDate": "2018-06-05"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef55"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 295880,
+            "LeadSource": "Word of mouth",
+            "Name": "Opportunity for Rodgers1051",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "New Business",
+            "CloseDate": "2017-07-21"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef56"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 1224345,
+            "LeadSource": "Partner",
+            "Name": "Opportunity for McKenzie1054",
+            "Probability": 100,
+            "StageName": "Closed Won",
+            "Type": "Existing Business",
+            "CloseDate": "2018-01-21"
+        },
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef57"
+            },
+            "AccountId": "@AccountRef99",
+            "Amount": 430330,
+            "LeadSource": "Web",
+            "Name": "Opportunity for Ramirez671",
+            "Probability": 0,
+            "StageName": "Closed Lost",
+            "Type": "Existing Business",
+            "CloseDate": "2018-04-19"
+        }
+    ]
+}
