@@ -74,4 +74,4 @@ jobs:
             sfdx force:source:convert -r force-app -d testDeploy 
             sfdx force:mdapi:deploy -d testDeploy/ -u sandbox -w 20
 
-            sfdx force:apex:execute -f assets/loadorgdata.apex -u newscratch
+            # sfdx force:apex:execute -f assets/loadorgdata.apex -u newscratch

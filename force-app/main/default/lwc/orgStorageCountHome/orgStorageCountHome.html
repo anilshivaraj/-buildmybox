@@ -1,13 +1,5 @@
 <template>
     <lightning-card title="Scratch Org Data(sorting needs to be fixed)" icon-name="standard:reward">
-        <!-- <ul class="slds-m-around_medium"> -->
-        <!-- <template iterator:it={record}>
-                <li key={it.value.name}>
-                    <div if:true={it.first} class="list-first"></div>
-                    {it.value.name}, {it.value.count}
-                    <div if:true={it.last} class="list-last"></div>
-                </li>
-            </template> -->
         <div class="slds-m-around_large">
             <table style="width:100%">
                 <tr>
@@ -23,6 +15,30 @@
 
             </table>
         </div>
-        <!-- </ul> -->
     </lightning-card>
+    <br>
+    <lightning-card title="Sandbox Limits" icon-name="standard:lightning_usage">
+        <div class="slds-m-around_small">
+            <table style="width:100%">
+                <tr>
+                    <th>NAME</th>
+                    <th class="slds-text-align_center">REMAINING</th>
+                    <th class="slds-text-align_center">MAXIMUM </th>
+                </tr>
+
+
+                <template iterator:it={listoflimits}>
+                    <tr key={it.value.Name}>
+                        <td>{it.value.Name}</td>
+                        <td>
+                            <div class="slds-float_right">{it.value.Remaining}</div>
+                        </td>
+                        <td class="slds-float_right"> {it.value.Max}</td>
+                    </tr>
+                </template>
+
+            </table>
+        </div>
+    </lightning-card>
+
 </template>
