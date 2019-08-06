@@ -52,24 +52,24 @@ jobs:
           name: Create Scratch Org and Deploy code
           command: |
             sfdx force:org:list --all
-            sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays 1 --setalias scratchorg_$REQUEST_ID
-            sfdx force:user:password:generate --targetusername scratchorg_$REQUEST_ID
-            sfdx force:source:push -u scratchorg_$REQUEST_ID
-            sfdx force:org:display -u scratchorg_$REQUEST_ID
+            sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays 1 --setalias $REQUEST_ID
+            sfdx force:user:password:generate --targetusername $REQUEST_ID
+            sfdx force:source:push -u $REQUEST_ID
+            sfdx force:org:display -u $REQUEST_ID
 
-            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u scratchorg_$REQUEST_ID
-            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u scratchorg_$REQUEST_ID
+            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
+            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
 
-            export SCRATCH_DETAILS="$(eval sfdx force:org:display -u scratchorg_$REQUEST_ID)"
+            export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
             echo $SCRATCH_DETAILS
 
-            export SCRATCH_LIMITS="$(eval sfdx force:limits:api:display -u scratchorg_$REQUEST_ID)"
+            export SCRATCH_LIMITS="$(eval sfdx force:limits:api:display -u $REQUEST_ID)"
             echo "$SCRATCH_LIMITS" > SCRATCH_LIMITS.TXT
             echo $SCRATCH_LIMITS
 
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Scratch_Org_Details__c='$SCRATCH_DETAILS' Status__c='Completed'" -u HubOrg
-            sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Sandbox_Limits__c='$SCRATCH_LIMITS' Org_Details__c='$SCRATCH_DETAILS'" -u scratchorg_$REQUEST_ID
+            sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Sandbox_Limits__c='$SCRATCH_LIMITS' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
 
             sfdx force:source:convert -r force-app -d testDeploy 
             sfdx force:mdapi:deploy -d testDeploy/ -u sandbox -w 20
