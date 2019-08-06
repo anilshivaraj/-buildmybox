@@ -47,10 +47,10 @@ jobs:
             sfdx force:auth:jwt:grant --clientid 3MVG9uudbyLbNPZOKYnQ9DAeeueqo.Oe3fjIhAtXoZmu0X1hSsFYDzg.io4Z__Zwx224PzG6hKm5Fc7I.b0Mi --jwtkeyfile assets/server.key --username anil.shivaraj@gmail.com.personal --instanceurl https://login.salesforce.com -a secondaryHubOrg
             sfdx force:auth:jwt:grant --clientid 3MVG973QtA4.tpvmGIsm1S6VuSeY5Bi81942aXs8m9RsRutzYlSQcRFBIomfH1txr7WlR4xQz1BdlP2.3Lb6g --jwtkeyfile assets/server.key --username ashivaraj@deloitte.com.qrscprod.dev --instanceurl https://test.salesforce.com -a sandbox
 
-            sfdx force:auth:jwt:grant --clientid 3MVG9vtcvGoeH2biPB.r7xCufPr6F7fKVm2Qim.AAxQghM_M7t5uodK6iwvdFgzF0UkpYEcyEUaqUk2CMJaxZ --jwtkeyfile assets/server.key --username test-x8ocknsc81ty@example.com --instanceurl https://test.salesforce.com -a my-scratch-org
-            sfdx force:org:delete -u my-scratch-org -p
+            sfdx force:auth:jwt:grant --clientid 3MVG9vtcvGoeH2biPB.r7xCufPr6F7fKVm2Qim.AAxQghM_M7t5uodK6iwvdFgzF0UkpYEcyEUaqUk2CMJaxZ --jwtkeyfile assets/server.key --username test-7af0iypnrnad@example.com --instanceurl https://test.salesforce.com -a my-scratch-org
 
-            export SCRATCH_DETAILS="$(eval sfdx force:org:display -u newscratch)"
+
+            export SCRATCH_DETAILS="$(eval sfdx force:org:delete -u my-scratch-org -p)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
             echo $SCRATCH_DETAILS
 
