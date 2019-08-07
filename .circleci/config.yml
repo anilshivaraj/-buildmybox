@@ -58,15 +58,14 @@ jobs:
             sfdx force:source:push -u $REQUEST_ID
             sfdx force:org:display -u $REQUEST_ID
 
-            # sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
-            # sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
-            sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
+            # # sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
+            # # sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
+            # sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
 
-            # sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
-            # sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
-            # sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
-            # sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
-
+            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
+            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
+            sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
+            sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
             sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
             sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
 
