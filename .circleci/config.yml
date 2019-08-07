@@ -60,6 +60,8 @@ jobs:
             sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
             sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID
 
+            sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
+
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
             echo $SCRATCH_DETAILS
