@@ -67,8 +67,8 @@ jobs:
             # sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
             # sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
 
-            sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json
-            sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json
+            sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
+            sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
 
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
