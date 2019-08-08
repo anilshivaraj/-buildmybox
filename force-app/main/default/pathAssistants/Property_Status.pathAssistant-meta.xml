@@ -4,7 +4,7 @@
     <entityName>Property__c</entityName>
     <fieldName>Status__c</fieldName>
     <masterLabel>Property Status</masterLabel>
-    <!-- <pathAssistantSteps>
+    <pathAssistantSteps>
         <fieldNames>Date_Listed__c</fieldNames>
         <fieldNames>Price__c</fieldNames>
         <picklistValueName>Available</picklistValueName>
@@ -29,6 +29,6 @@
         <fieldNames>Date_Agreement__c</fieldNames>
         <fieldNames>Date_Closed__c</fieldNames>
         <picklistValueName>Under Agreement</picklistValueName>
-    </pathAssistantSteps> -->
+    </pathAssistantSteps>
     <recordTypeName>__MASTER__</recordTypeName>
 </PathAssistant>
