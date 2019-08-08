@@ -16,6 +16,8 @@ export default class ScratchOrgDetailsHome extends LightningElement {
   recid;
   orgname;
   status;
+  remainingDays;
+  expired;
 
   @wire(getScratchOrgDetails) contact({ error, data }) {
     if (data) {
@@ -79,6 +81,16 @@ export default class ScratchOrgDetailsHome extends LightningElement {
       this.recid = recid;
       this.orgname = orgname;
       this.status = status;
+      if((new Date(expirationdate).getTime() - new Date().getTime()) > 0 ){
+        const diffTime = Math.abs(new Date(expirationdate).getTime() - new Date().getTime());
+        this.remainingDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        this.expired = false;
+      }else{
+        this.remainingDays = 0;
+        this.expired = true;
+      }
+        
+      
     } else if (error) {
       this.error = error;
       this.record = undefined;

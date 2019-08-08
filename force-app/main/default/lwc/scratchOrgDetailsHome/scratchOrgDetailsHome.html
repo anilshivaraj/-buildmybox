@@ -20,10 +20,18 @@
                     </div>
                     <div class="row slds-m-around_small">
                         <div>Expiration Date</div>
-                        <div>
-                            <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
-                                day="2-digit" weekday="long"></lightning-formatted-date-time>
-                        </div>
+                        <template if:false={expired}>
+                            <div>
+                                <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
+                                    day="2-digit" weekday="long"></lightning-formatted-date-time> ({remainingDays} days remaining)
+                            </div>
+                        </template>
+                        <template if:true={expired}>
+                            <div>
+                                <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
+                                    day="2-digit" weekday="long"></lightning-formatted-date-time> (Expired)
+                            </div>
+                        </template>
                     </div>
                     <div class="row slds-m-around_small">
                         <div>Org Alias(For SFDX)</div>
