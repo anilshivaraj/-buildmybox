@@ -84,32 +84,6 @@ public with sharing class ScratchOrgDetails {
         return details;
     }
 
-    @AuraEnabled
-    public static String createMigrationReq(Id ReqId) {
-        
-        Request_Scratch_Org__c scratchOrgReq = [Select Id, Components_Changed__c from Request_Scratch_Org__c where Id=: ReqId LIMIT 1];
-        Migration_Request__c migRequest = new Migration_Request__c(Request_ID__c = ReqId, Status__c = 'Draft');
-        String listOfVals='';
-        //system.debug('scratchOrgReq.Components_Changed__c: '+scratchOrgReq.Components_Changed__c);
-        for(String eachChange : scratchOrgReq.Components_Changed__c.split('[\n\r]')){
-           // system.debug('eachChange: '+eachChange);
-            if (!eachChange.startsWith('STATE') &&
-                !eachChange.startsWith('===') &&
-                !eachChange.startsWith('─────')
-                ){
-                List<String> res = new List<String>();
-                res = eachChange.split(' +'); 
-                //system.debug('res: '+res);
-                if(listOfVals == '')
-                    listOfVals =  res[1];
-                else
-                    listOfVals = listOfVals + ', ' + res[1] ;
-            }
-        }
-        //system.debug('listOfVals: '+listOfVals);
-        migRequest.Components_Submitted__c = listOfVals;
-        insert migRequest;
-        return migRequest.Id;
-    }
+   
    
 }
