@@ -61,7 +61,9 @@ jobs:
             sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
             sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
             sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
-            sfdx force:user:permset:assign -n dreamhouse
+            sfdx force:user:permset:assign -n dreamhouse -u $REQUEST_ID
+
+            sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
 
             sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
             sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
