@@ -2,56 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {
-            "c/actionBar": [
-                "actionBar/actionBar.js"
-            ],
-            "c/alert": [
-                "alert/alert.js"
-            ],
-            "c/bundle": [
-                "bundle/bundle.js"
-            ],
-            "c/bundleTile": [
-                "bundleTile/bundleTile.js"
-            ],
-            "c/harvestField": [
-                "harvestField/harvestField.js"
-            ],
-            "c/harvestFieldList": [
-                "harvestFieldList/harvestFieldList.js"
-            ],
-            "c/harvestFieldMap": [
-                "harvestFieldMap/harvestFieldMap.js"
-            ],
-            "c/harvestFieldMapNav": [
-                "harvestFieldMapNav/harvestFieldMapNav.js"
-            ],
-            "c/irrigationDialog": [
-                "irrigationDialog/irrigationDialog.js"
-            ],
-            "c/irrigationManager": [
-                "irrigationManager/irrigationManager.js"
-            ],
-            "c/merchandiseList": [
-                "merchandiseList/merchandiseList.js"
-            ],
-            "c/merchandisePicture": [
-                "merchandisePicture/merchandisePicture.js"
-            ],
-            "c/merchandiseTile": [
-                "merchandiseTile/merchandiseTile.js"
-            ],
-            "c/paginatorpure": [
-                "paginatorpure/paginatorpure.js"
-            ],
-            "c/path": [
-                "path/path.js"
-            ],
-            "c/pubsubpure": [
-                "pubsubpure/pubsubpure.js"
-            ]
-        }
+        "paths": {}
     },
     "include": [
         "**/*",
