@@ -386,6 +386,12 @@
     <layoutAssignments>
         <layout>Merchandise__c-Merchandise Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>Fund__c-Fund Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Sector__c-Sector Layout</layout>
+    </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>

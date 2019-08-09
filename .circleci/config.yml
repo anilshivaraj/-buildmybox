@@ -51,10 +51,10 @@ jobs:
           name: Create Scratch Org and Deploy code
           command: |
             sfdx force:org:list --all
-            # sfdx force:auth:jwt:grant --clientid 3MVG9vtcvGoeH2biPB.r7xCufPr6F7fKVm2Qim.AAxQghM_M7t5uodK6iwvdFgzF0UkpYEcyEUaqUk2CMJaxZ --jwtkeyfile assets/server.key --username test-qw7kasjwzavu@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
+            sfdx force:auth:jwt:grant --clientid 3MVG9vtcvGoeH2biPB.r7xCufPr6F7fKVm2Qim.AAxQghM_M7t5uodK6iwvdFgzF0UkpYEcyEUaqUk2CMJaxZ --jwtkeyfile assets/server.key --username test-dilguj4ctxng@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
 
-            sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays 1 --setalias $REQUEST_ID
-            sfdx force:user:password:generate --targetusername $REQUEST_ID
+            # sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays 1 --setalias $REQUEST_ID
+            # sfdx force:user:password:generate --targetusername $REQUEST_ID
             sfdx force:source:push -u $REQUEST_ID
             sfdx force:org:display -u $REQUEST_ID
 
@@ -62,6 +62,7 @@ jobs:
             sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
             sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
             sfdx force:user:permset:assign -n dreamhouse -u $REQUEST_ID
+            sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
 
             sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
 
@@ -71,6 +72,8 @@ jobs:
             sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
             sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
             sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
+            sfdx force:data:bulk:upsert -s Sector__c -f ~/ci_app/data/sectors.csv -w 1 -i Sector_Id__c -u $REQUEST_ID
+            sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
 
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
