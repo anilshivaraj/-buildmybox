@@ -53,7 +53,7 @@ jobs:
             sfdx force:org:list --all
             # sfdx force:auth:jwt:grant --clientid 3MVG9vtcvGoeH2biPB.r7xCufPr6F7fKVm2Qim.AAxQghM_M7t5uodK6iwvdFgzF0UkpYEcyEUaqUk2CMJaxZ --jwtkeyfile assets/server.key --username test-2ai98w5q5tjg@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
 
-            sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays 1 --setalias $REQUEST_ID
+            sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays 1 --setalias $REQUEST_ID
             sfdx force:user:password:generate --targetusername $REQUEST_ID
             sfdx force:source:push -u $REQUEST_ID
             sfdx force:org:display -u $REQUEST_ID
