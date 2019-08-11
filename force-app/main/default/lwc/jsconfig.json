@@ -45,6 +45,9 @@
             "c/apiSetterGetter": [
                 "apiSetterGetter/apiSetterGetter.js"
             ],
+            "c/assetClassSelector": [
+                "assetClassSelector/assetClassSelector.js"
+            ],
             "c/auraPubsub": [
                 "auraPubsub/auraPubsub.js"
             ],
@@ -104,6 +107,18 @@
             ],
             "c/eventWithData": [
                 "eventWithData/eventWithData.js"
+            ],
+            "c/fundFilter": [
+                "fundFilter/fundFilter.js"
+            ],
+            "c/fundInfoPopup": [
+                "fundInfoPopup/fundInfoPopup.js"
+            ],
+            "c/fundTile": [
+                "fundTile/fundTile.js"
+            ],
+            "c/fundTileList": [
+                "fundTileList/fundTileList.js"
             ],
             "c/harvestField": [
                 "harvestField/harvestField.js"
@@ -210,6 +225,15 @@
             "c/mortgage": [
                 "mortgage/mortgage.js"
             ],
+            "c/mortgageAmortization": [
+                "mortgageAmortization/mortgageAmortization.js"
+            ],
+            "c/mortgageCalculatorinvest": [
+                "mortgageCalculatorinvest/mortgageCalculatorinvest.js"
+            ],
+            "c/mortgageUtils": [
+                "mortgageUtils/mortgageUtils.js"
+            ],
             "c/navToChatterHome": [
                 "navToChatterHome/navToChatterHome.js"
             ],
@@ -246,11 +270,17 @@
             "c/paginator": [
                 "paginator/paginator.js"
             ],
+            "c/paginatorinvest": [
+                "paginatorinvest/paginatorinvest.js"
+            ],
             "c/paginatorpure": [
                 "paginatorpure/paginatorpure.js"
             ],
             "c/path": [
                 "path/path.js"
+            ],
+            "c/percentReturnRange": [
+                "percentReturnRange/percentReturnRange.js"
             ],
             "c/placeholder": [
                 "placeholder/placeholder.js"
@@ -282,8 +312,14 @@
             "c/pubsubSearchBar": [
                 "pubsubSearchBar/pubsubSearchBar.js"
             ],
+            "c/pubsubinvest": [
+                "pubsubinvest/pubsubinvest.js"
+            ],
             "c/pubsubpure": [
                 "pubsubpure/pubsubpure.js"
+            ],
+            "c/rating": [
+                "rating/rating.js"
             ],
             "c/recordEditFormDynamicContact": [
                 "recordEditFormDynamicContact/recordEditFormDynamicContact.js"
@@ -306,8 +342,20 @@
             "c/scratchOrgDetailsHome": [
                 "scratchOrgDetailsHome/scratchOrgDetailsHome.js"
             ],
+            "c/searchBar": [
+                "searchBar/searchBar.js"
+            ],
+            "c/sectorSelector": [
+                "sectorSelector/sectorSelector.js"
+            ],
             "c/similarProducts": [
                 "similarProducts/similarProducts.js"
+            ],
+            "c/stockUtils": [
+                "stockUtils/stockUtils.js"
+            ],
+            "c/stockWidget": [
+                "stockWidget/stockWidget.js"
             ],
             "c/todoList": [
                 "todoList/todoList.js"
@@ -338,54 +386,6 @@
             ],
             "c/wireListView": [
                 "wireListView/wireListView.js"
-            ],
-            "c/assetClassSelector": [
-                "assetClassSelector/assetClassSelector.js"
-            ],
-            "c/fundFilter": [
-                "fundFilter/fundFilter.js"
-            ],
-            "c/fundInfoPopup": [
-                "fundInfoPopup/fundInfoPopup.js"
-            ],
-            "c/fundTile": [
-                "fundTile/fundTile.js"
-            ],
-            "c/fundTileList": [
-                "fundTileList/fundTileList.js"
-            ],
-            "c/mortgageAmortization": [
-                "mortgageAmortization/mortgageAmortization.js"
-            ],
-            "c/mortgageCalculatorinvest": [
-                "mortgageCalculatorinvest/mortgageCalculatorinvest.js"
-            ],
-            "c/mortgageUtils": [
-                "mortgageUtils/mortgageUtils.js"
-            ],
-            "c/paginatorinvest": [
-                "paginatorinvest/paginatorinvest.js"
-            ],
-            "c/percentReturnRange": [
-                "percentReturnRange/percentReturnRange.js"
-            ],
-            "c/pubsubinvest": [
-                "pubsubinvest/pubsubinvest.js"
-            ],
-            "c/rating": [
-                "rating/rating.js"
-            ],
-            "c/searchBar": [
-                "searchBar/searchBar.js"
-            ],
-            "c/sectorSelector": [
-                "sectorSelector/sectorSelector.js"
-            ],
-            "c/stockUtils": [
-                "stockUtils/stockUtils.js"
-            ],
-            "c/stockWidget": [
-                "stockWidget/stockWidget.js"
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
