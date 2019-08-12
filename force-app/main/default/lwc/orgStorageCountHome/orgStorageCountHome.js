@@ -8,6 +8,7 @@ export default class OrgStorageCountHome extends LightningElement {
 
   @track
   apilimit;
+  lastModifiedDate;
 
   listoflimits = [];
 
@@ -23,8 +24,9 @@ export default class OrgStorageCountHome extends LightningElement {
   @wire(getOrglimit) limits({ error, data }) {
     if (data) {
       var username = [];
-      this.apilimit = data;
-      data.split(/\r?\n/).forEach(function(element) {
+      this.lastModifiedDate = data.Components_Changed_Time__c;
+      this.apilimit = data.Sandbox_Limits__c;
+      data.Sandbox_Limits__c.split(/\r?\n/).forEach(function(element) {
         if (!element.startsWith("NAME") && !element.startsWith("──────")) {
           var res = element.split(/[ ,]+/);
           var cell = {
