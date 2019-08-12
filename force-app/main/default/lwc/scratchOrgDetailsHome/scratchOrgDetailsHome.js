@@ -18,10 +18,12 @@ export default class ScratchOrgDetailsHome extends LightningElement {
   status;
   remainingDays;
   expired;
+  lastModifiedDate;
 
   @wire(getScratchOrgDetails) contact({ error, data }) {
     if (data) {
-      this.record = data;
+      this.record = data.Org_Details__c;
+      this.lastModifiedDate = data.Components_Changed_Time__c;
       this.error = undefined;
       var username;
       var password;
@@ -95,5 +97,11 @@ export default class ScratchOrgDetailsHome extends LightningElement {
       this.error = error;
       this.record = undefined;
     }
+  }
+
+  handleCopy (){
+    console.log(this.template.querySelector(".url").textContent);
+    this.template.querySelector(".url").select();
+    document.execCommand('copy');
   }
 }
