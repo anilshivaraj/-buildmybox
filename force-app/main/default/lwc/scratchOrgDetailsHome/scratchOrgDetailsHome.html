@@ -4,19 +4,21 @@
 
             <lightning-layout-item>
                 <div class="slds-m-left_small">
-                    <div class="row slds-m-around_small">
-                        <div>Login url</div>
-                        <div>
-                            {instanceurl}
+                    <div class="url">
+                        <div class="row slds-m-around_small">
+                            <div>Login url </div>
+                            <div>
+                                {instanceurl}
+                            </div>
                         </div>
-                    </div>
-                    <div class="row slds-m-around_small">
-                        <div>Username</div>
-                        <div>{username}</div>
-                    </div>
-                    <div class="row slds-m-around_small">
-                        <div>Password</div>
-                        <div>{password}</div>
+                        <div class="row slds-m-around_small">
+                            <div> Username </div>
+                            <div>{username}</div>
+                        </div>
+                        <div class="row slds-m-around_small">
+                            <div> Password </div>
+                            <div>{password}</div>
+                        </div>
                     </div>
                     <div class="row slds-m-around_small">
                         <div>Expiration Date</div>
@@ -29,7 +31,8 @@
                         <template if:true={expired}>
                             <div>
                                 <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
-                                    day="2-digit" weekday="long"></lightning-formatted-date-time> (Expired)
+                                    day="2-digit" weekday="long"></lightning-formatted-date-time> 
+                                    <span class="slds-text-color_destructive"> (Expired)</span>
                             </div>
                         </template>
                     </div>
@@ -61,12 +64,17 @@
             </lightning-layout-item>
 
             <lightning-layout-item alignment-bump="left">
-                <lightning-button-icon size="large" class="slds-m-right_large" onclick={handlerefresh}
+                <lightning-button-icon size="large" class="slds-m-right_large" onclick={handleCopy}
                     icon-name="utility:copy" alternative-text="copy credentials">
                 </lightning-button-icon>
             </lightning-layout-item>
         </lightning-layout>
-
+        <div slot="actions">
+            
+            As of <lightning-formatted-date-time value={lastModifiedDate} month="short"
+                    day="2-digit" weekday="long" hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
+                
+        </div>
 
     </lightning-card>
 </template>
