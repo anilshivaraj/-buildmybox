@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Org Changes" icon-name="standard:code_playground">
+        <lightning-button variant="brand" label="Check Diff" class=" slds-align_absolute-center"
+                    title="Check Diff" onclick={login} icon-name="utility:apex"></lightning-button>
+        <lightning-layout>
+            <lightning-layout-item size="12">
+                <div class="slds-m-around_small">
+
+                    <table style="width:100%"
+                        class="slds-table slds-table_bordered slds-table_resizable-cols">
+                        <tr>
+                            <th>STATE</th>
+                            <th>FULL NAME</th>
+                            <th>TYPE</th>
+                            <th>PROJECT PATH</th>
+                        </tr>
+                        <template if:true={listofChanges}>
+                            <template iterator:it={listofChanges}>
+                                <tr key={it.value.projectpath}>
+                                    <td>{it.value.state}</td>
+                                    <td>{it.value.fullname}</td>
+                                    <td>{it.value.type}</td>
+                                    <td class="slds-truncate" title={it.value.projectpath}>{it.value.projectpath}</td>
+                                </tr>
+                            </template>
+                        </template>
+
+                    </table>
+                </div>
+            </lightning-layout-item>
+            
+        </lightning-layout>
+        
+        <div slot="actions">
+            
+            As of <lightning-formatted-date-time value={lastModifiedDate} month="short"
+                    day="2-digit" weekday="long" hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
+            
+        </div>
+                    
+    </lightning-card>
+</template>
