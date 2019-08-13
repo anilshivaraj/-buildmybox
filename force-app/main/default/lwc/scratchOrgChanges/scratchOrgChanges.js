@@ -13,7 +13,10 @@ export default class ScratchOrgChanges extends LightningElement {
     @wire(getScratchOrgChanges) wiredAccount({ error, data }) {
         var username = [];
         if (data) {
-            this.lastModifiedDate = data.Components_Changed_Time__c;
+            if(data.Components_Changed_Time__c != null && data.Components_Changed_Time__c != '')
+                this.lastModifiedDate = data.Components_Changed_Time__c;
+            else
+                this.lastModifiedDate = data.CreatedDate;
             data.Components_Changed__c.split(/\r?\n/)
             .forEach(function(element) {
                 if (
