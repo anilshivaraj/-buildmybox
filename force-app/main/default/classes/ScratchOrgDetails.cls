@@ -3,7 +3,7 @@ public with sharing class ScratchOrgDetails {
     @AuraEnabled(cacheable=true)
     public static Scratch_Org_Creds__c getScratchOrgDetails() {
         Scratch_Org_Creds__c details;
-        for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Req_ID__c,Components_Changed_Time__c from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
+        for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Req_ID__c,Components_Changed_Time__c, CreatedDate from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
             details = oDetails;
             break;
         }
@@ -26,7 +26,7 @@ public with sharing class ScratchOrgDetails {
     @AuraEnabled(cacheable=true)
     public static Scratch_Org_Creds__c getOrglimits() {
         Scratch_Org_Creds__c sOrglimit;
-        for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Sandbox_Limits__c, Components_Changed_Time__c from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
+        for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Sandbox_Limits__c, Components_Changed_Time__c, CreatedDate from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
             sOrglimit = oDetails;
             break;
         }
@@ -77,7 +77,7 @@ public with sharing class ScratchOrgDetails {
 	@AuraEnabled(cacheable=true)
     public static Scratch_Org_Creds__c getScratchOrgChanges() {
         Scratch_Org_Creds__c details;
-        for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Components_Changed__c, Components_Changed_Time__c, Req_ID__c from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
+        for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Components_Changed__c, Components_Changed_Time__c, Req_ID__c, CreatedDate from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
             details = oDetails;
             break;
         }
