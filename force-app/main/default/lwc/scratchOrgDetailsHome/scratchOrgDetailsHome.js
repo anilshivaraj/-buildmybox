@@ -60,7 +60,7 @@ export default class ScratchOrgDetailsHome extends LightningElement {
           createdby = element.replace("Created By ", "");
         } else if (element.includes("Created Date ")) {
           element = element.replace("Created Date ", "");
-          createddate = Date.parse(element);
+          createddate = Date.parse(element.trim());
         } else if (element.includes("Access Token ")) {
           accesstoken = element.replace("Access Token ", "");
         } else if (element.includes("Dev Hub Id ")) {
