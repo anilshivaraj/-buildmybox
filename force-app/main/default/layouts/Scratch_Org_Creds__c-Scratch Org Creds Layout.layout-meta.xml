@@ -15,6 +15,10 @@
                 <behavior>Edit</behavior>
                 <field>Req_ID__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Components_Changed_Time__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
@@ -36,6 +40,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Data__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Components_Changed__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
