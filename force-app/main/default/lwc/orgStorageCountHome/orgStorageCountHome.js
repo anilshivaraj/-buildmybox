@@ -24,7 +24,10 @@ export default class OrgStorageCountHome extends LightningElement {
   @wire(getOrglimit) limits({ error, data }) {
     if (data) {
       var username = [];
-      this.lastModifiedDate = data.Components_Changed_Time__c;
+      if(data.Components_Changed_Time__c != null && data.Components_Changed_Time__c != '')
+        this.lastModifiedDate = data.Components_Changed_Time__c;
+      else
+        this.lastModifiedDate = data.CreatedDate;
       this.apilimit = data.Sandbox_Limits__c;
       data.Sandbox_Limits__c.split(/\r?\n/).forEach(function(element) {
         if (!element.startsWith("NAME") && !element.startsWith("──────")) {
