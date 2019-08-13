@@ -23,7 +23,10 @@ export default class ScratchOrgDetailsHome extends LightningElement {
   @wire(getScratchOrgDetails) contact({ error, data }) {
     if (data) {
       this.record = data.Org_Details__c;
-      this.lastModifiedDate = data.Components_Changed_Time__c;
+      if(data.Components_Changed_Time__c != null && data.Components_Changed_Time__c != '')
+        this.lastModifiedDate = data.Components_Changed_Time__c;
+      else
+        this.lastModifiedDate = data.CreatedDate;
       this.error = undefined;
       var username;
       var password;
