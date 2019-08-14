@@ -434,6 +434,10 @@
         <tab>Real_Time</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
+    <tabVisibilities>
+        <tab>Scratch_Org_Creds__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
     </layoutAssignments>
@@ -591,9 +595,5 @@
         <object>Product__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <tabVisibilities>
-        <tab>Scratch_Org_Creds__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
 </Profile>
