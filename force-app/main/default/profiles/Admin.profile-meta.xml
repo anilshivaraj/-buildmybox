@@ -61,6 +61,11 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>ChartJS_Demo</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>standard__Sites</application>
         <default>false</default>
         <visible>false</visible>
@@ -416,6 +421,14 @@
         <field>Product__c.Rear_Brakes__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <tabVisibilities>
+        <tab>Interactive1</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Real_Time</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
     </layoutAssignments>
