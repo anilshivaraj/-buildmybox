@@ -339,6 +339,9 @@
             "c/recordViewFormStaticContact": [
                 "recordViewFormStaticContact/recordViewFormStaticContact.js"
             ],
+            "c/scratchOrgChanges": [
+                "scratchOrgChanges/scratchOrgChanges.js"
+            ],
             "c/scratchOrgDetailsHome": [
                 "scratchOrgDetailsHome/scratchOrgDetailsHome.js"
             ],
