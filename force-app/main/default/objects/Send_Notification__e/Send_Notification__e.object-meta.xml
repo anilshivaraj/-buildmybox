@@ -4,5 +4,4 @@
     <eventType>HighVolume</eventType>
     <label>Send Notification</label>
     <pluralLabel>Send Notifications</pluralLabel>
-    <publishBehavior>PublishImmediately</publishBehavior>
 </CustomObject>
