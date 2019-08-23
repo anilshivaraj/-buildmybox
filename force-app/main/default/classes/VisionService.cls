@@ -47,10 +47,10 @@ public class VisionService {
                 message = 'This plant is healthy';
             } else {
                 message = 'This plant is unhealthy and requires immediate attention';
-                Field_Status_Change__e evt = new Field_Status_Change__e();
+                /*Field_Status_Change__e evt = new Field_Status_Change__e();
                 evt.Field_Id__c = fieldId;
                 evt.Status__c = 'Alert';
-                EventBus.publish(evt);                            
+                EventBus.publish(evt); */                           
             }
 			FeedComment comment = new FeedComment();
     	    comment.FeedItemId = this.feedItemId;

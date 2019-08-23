@@ -1,0 +1,154 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="Noti5_NotificationUtility">
+    <lightning:utilityBarAPI aura:id="utilitybar" />
+    <lightning:empApi aura:id="empApi" />
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:attribute name="subscription" type="Map" />
+    <aura:attribute name="subject" type="String" />
+    <aura:attribute name="Priority" type="String" />
+    <aura:attribute name="AudienceType" type="String" />
+    <aura:attribute name="Description" type="String" />
+    <aura:attribute name="NotificationId" type="String" />
+    <aura:attribute name="NotificationNumber" type="String" />
+    <aura:attribute name="UserGroupId" type="String" />
+    <aura:attribute name="checked" type="Boolean" default="false" />
+    <aura:attribute name="AcknowledgedMessages" type="list" />
+    <aura:attribute name="UnreadMessages" type="Notification__c[]" />
+    <aura:attribute name="ShameList" type="list" />
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="isRecall" type="Boolean" default="false" />
+
+    <aura:if isTrue="{! v.loaded }">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+
+    <lightning:tabset selectedTabId="one" aura:id="tabs">
+        <lightning:tab label="New" id="one">
+
+            <aura:if isTrue="{!v.UnreadMessages}">
+
+                <aura:iteration items="{!v.UnreadMessages}" var="message">
+                    <lightning:layout multipleRows="true" pullToBoundary="medium"
+                        class="slds-m-around_x-small slds-border_bottom">
+                        <lightning:layoutItem size="10">
+                            <div class="slds-m-left_x-small">
+                                <div class="slds-p-bottom--x-small">
+                                    <lightning:icon iconName="utility:announcement" size="x-small"
+                                        class="slds-p-right--x-small" />
+                                    <b>{!message.Name}</b></div>
+                                <lightning:formattedText value="{!message.Message__c}" />
+                            </div>
+                        </lightning:layoutItem>
+
+                        <lightning:layoutItem alignmentBump="left">
+                            <div class="slds-m-left_small">
+                                <lightning:avatar src="{!message.CreatedBy.SmallPhotoUrl}"
+                                    alternativeText="{!message.CreatedBy.Name}" class="slds-m-right_small" />
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem>
+                            <div class="slds-m-horizontal_xx-small">
+                                <lightning:buttonIconStateful id="{!message.Id}" iconName="utility:like"
+                                    alternativeText="Confirm Read" onclick="{!c.handleCheckButtonClick}" />
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </aura:iteration>
+
+            </aura:if>
+
+        </lightning:tab>
+        <lightning:tab label="History" id="two">
+            <aura:if isTrue="{!v.AcknowledgedMessages.length > 0}">
+                <aura:iteration items="{!v.AcknowledgedMessages}" var="message">
+
+                    <lightning:layout multipleRows="true" pullToBoundary="medium"
+                        class="slds-m-around_x-small slds-border_bottom">
+                        <lightning:layoutItem size="10">
+                            <div class="slds-m-left_x-small">
+                                <div class="slds-p-bottom--x-small">
+                                    <lightning:icon iconName="utility:announcement" size="x-small"
+                                        class="slds-p-right--x-small" />
+                                    <b>{!message.Notification__r.Name}</b></div>
+                                <lightning:formattedText value="{!message.Notification__r.Message__c}" />
+                            </div>
+                        </lightning:layoutItem>
+
+                        <lightning:layoutItem alignmentBump="left">
+                            <lightning:formattedDateTime class="slds-text-body_small"
+                                value="{!message.Notification__r.CreatedDate}" year="numeric" month="numeric"
+                                day="numeric" hour="2-digit" minute="2-digit" hour12="true" />
+                            <br /><br />
+                            <div class="slds-text-color_success slds-text-align_center">Acknowledged at</div>
+                            <lightning:formattedDateTime class="slds-text-body_small"
+                                value="{!message.Response_Time__c}" year="numeric" month="numeric" day="numeric"
+                                hour="2-digit" minute="2-digit" hour12="true" />
+                        </lightning:layoutItem>
+
+                    </lightning:layout>
+
+                </aura:iteration>
+            </aura:if>
+        </lightning:tab>
+        <lightning:tab label="Wall of Shame" id="shame">
+
+            <aura:if isTrue="{!v.ShameList}">
+
+                <lightning:layout class="slds-border_bottom">
+
+                    <lightning:layoutItem class="slds-p-left_small slds-text-align_center slds-p-vertical_xxx-small"
+                        size="4">
+                        Name
+                    </lightning:layoutItem>
+
+                    <lightning:layoutItem class="slds-text-align_center slds-p-vertical_xxx-small" size="2">
+                        Last Login
+                    </lightning:layoutItem>
+
+                    <lightning:layoutItem size="2" alignmentBump="left"
+                        class="slds-text-align_center slds-p-vertical_xxx-small slds-text-body_small">
+                        # of Pending Notifications
+                    </lightning:layoutItem>
+
+                    <lightning:layoutItem size="3"
+                        class="slds-p-vertical_xxx-small slds-text-align_center slds-text-body_small">
+                        Elapsed Time
+                    </lightning:layoutItem>
+                </lightning:layout>
+
+                <aura:iteration items="{!v.ShameList}" var="message">
+                    <lightning:layout
+                        class="slds-p-vertical_xx-small slds-border_bottom slds-p-left_small slds-p-right_small">
+
+                        <lightning:layoutItem class="slds-p-around_xx-small">
+                            <lightning:avatar src="{!message.smallPhotoUrl}" alternativeText="{!message.name}" />
+                        </lightning:layoutItem>
+
+                        <lightning:layoutItem size="4" class="slds-p-vertical_small slds-p-left_x-small">
+                            {!message.name}
+                        </lightning:layoutItem>
+
+                        <lightning:layoutItem size="3" class="slds-p-vertical_small">
+                            {!message.lastlogin}
+                        </lightning:layoutItem>
+
+
+                        <lightning:layoutItem size="1" alignmentBump="left"
+                            class="slds-text-align_center slds-p-vertical_small">
+                            {!message.sCount}
+                        </lightning:layoutItem>
+
+                        <lightning:layoutItem size="3" class="slds-text-align_right slds-p-vertical_small">
+                            {!message.sElapsedTime}
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </aura:iteration>
+
+            </aura:if>
+
+        </lightning:tab>
+        <lightning:tab class="slds-tabs_medium" label="Refersh" iconName="utility:refresh" id="refresh"
+            onactive="{!c.refreshData}"></lightning:tab>
+
+    </lightning:tabset>
+
+</aura:component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elapsed_Time__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(FLOOR(NOW() - CreatedDate) = 0,
+		 &quot;&quot;,
+		IF(FLOOR(NOW() - CreatedDate) &gt; 1,Text(FLOOR(NOW() - CreatedDate))&amp;&quot; days &quot;,Text(FLOOR(NOW() - CreatedDate))&amp;&quot; day &quot;))
+
+&amp;&quot; &quot;&amp;
+
+
+
+
+Text(FLOOR(MOD( (NOW() - CreatedDate) * 24 ,24))) &amp;&quot; &quot;&amp;&quot;hrs&quot;&amp;&quot; &quot;&amp;
+
+Text( FLOOR(MOD(((NOW()- CreatedDate) * 24)*60 + 0.001 ,60)))&amp;&quot; &quot;&amp;&quot;min&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Elapsed Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

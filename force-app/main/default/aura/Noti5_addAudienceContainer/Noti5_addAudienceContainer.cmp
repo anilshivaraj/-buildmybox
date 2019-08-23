@@ -1,0 +1,5 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,lightning:actionOverride,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="recordId" type="Id" />  
+
+    <c:noTi5AddMultipleAudience notificationId="{!v.recordId}" onsave="{!c.saveHandler}"></c:noTi5AddMultipleAudience>
+</aura:component>

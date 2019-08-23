@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Recall the sent Notification</description>
+    <fieldOverrides>
+        <field>Status__c</field>
+        <literalValue>Recall</literalValue>
+    </fieldOverrides>
+    <label>Recall Notification</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Notification Recalled successfully</successMessage>
+    <type>Update</type>
+</QuickAction>

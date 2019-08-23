@@ -1,0 +1,116 @@
+<template>
+    <lightning-card>
+        <template if:true={user}>
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" class="slds-m-left_medium slds-text-align_center">
+                    <a target="_blank" href="/lightning/setup/ManageUsers/page"
+                        class="slds-text-heading_small slds-text-align_center">{user.Name}</a>
+                    <template if:true={user.datetimeacknowledged}>
+                        <lightning-icon class="slds-m-left_xx-small" icon-name="action:approval" size="xx-small">
+                        </lightning-icon>
+                    </template>
+                </lightning-layout-item>
+
+            </lightning-layout>
+
+            <lightning-layout>
+
+                <lightning-layout-item size="2" class="slds-m-top_x-large slds-m-horizontal_small">
+
+                    <template if:true={user.FullPhotoUrl}>
+                        <img src={user.FullPhotoUrl} alt={user.Name} />
+                    </template>
+
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+
+                    <lightning-tile>
+                        <dl class="slds-dl_horizontal slds-border_bottom slds-p-top_x-small">
+
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Email">Email</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Email">
+                                    <lightning-formatted-email value={user.email}></lightning-formatted-email>
+                                </p>
+                            </dd>
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Last Login Date">Last Login</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Last Login Date">
+                                    {user.lastlogindate}</p>
+                            </dd>
+                        </dl>
+                        <dl class="slds-dl_horizontal slds-border_bottom slds-p-top_x-small">
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Profile">Profile</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Profile">{user.profile}</p>
+                            </dd>
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Role">Role</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Role">
+                                    {user.role}</p>
+                            </dd>
+                        </dl>
+                        <dl class="slds-dl_horizontal slds-border_bottom slds-p-top_x-small">
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Profile">Public Groups</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <ul class="slds-list_dotted">
+                                    <template if:true={user.publicgroups}>
+                                        <template for:each={user.publicgroups} for:item="acc">
+                                            <li key={acc}>{acc}</li>
+                                        </template>
+                                    </template>
+
+                                </ul>
+
+                            </dd>
+
+                        </dl>
+                        <dl class="slds-dl_horizontal slds-border_bottom slds-p-top_x-small">
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Role">Queues</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <ul class="slds-list_dotted">
+                                    <template if:true={user.queues}>
+                                        <template for:each={user.queues} for:item="queue">
+                                            <li key={queue}>{queue}</li>
+                                        </template>
+                                    </template>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="slds-dl_horizontal slds-p-top_x-small">
+                            <dt class="slds-dl_horizontal__label slds-p-vertical_xx-small">
+                                <p class="slds-truncate" title="Role">Permissionsets</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta slds-p-vertical_xx-small">
+                                <ul class="slds-list_dotted">
+                                    <template if:true={user.permissionsets}>
+                                        <template for:each={user.permissionsets} for:item="perm">
+                                            <li key={perm}>{perm}</li>
+                                        </template>
+                                    </template>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                    </lightning-tile>
+
+
+                </lightning-layout-item>
+            </lightning-layout>
+
+
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Notification_Sent</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Sent</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Notification Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Notification Sent Recordtype</fullName>
+        <actions>
+            <name>Notification_Sent</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Notification__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Notification Sent</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -2,6 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <deploymentStatus>Deployed</deploymentStatus>
     <eventType>HighVolume</eventType>
-    <label>Field Status Change</label>
-    <pluralLabel>Field Status Changes</pluralLabel>
+    <label>Send Notification</label>
+    <pluralLabel>Send Notifications</pluralLabel>
+    <publishBehavior>PublishImmediately</publishBehavior>
 </CustomObject>
