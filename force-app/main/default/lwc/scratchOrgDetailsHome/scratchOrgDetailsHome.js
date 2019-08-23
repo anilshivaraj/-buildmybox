@@ -2,6 +2,7 @@ import { LightningElement, wire, track } from "lwc";
 import getScratchOrgDetails from "@salesforce/apex/ScratchOrgDetails.getScratchOrgDetails";
 
 export default class ScratchOrgDetailsHome extends LightningElement {
+  @track isSelected = false;
   @track
   username;
   password;
@@ -23,10 +24,12 @@ export default class ScratchOrgDetailsHome extends LightningElement {
   @wire(getScratchOrgDetails) contact({ error, data }) {
     if (data) {
       this.record = data.Org_Details__c;
-      if(data.Components_Changed_Time__c != null && data.Components_Changed_Time__c != '')
+      if (
+        data.Components_Changed_Time__c != null &&
+        data.Components_Changed_Time__c != ""
+      )
         this.lastModifiedDate = data.Components_Changed_Time__c;
-      else
-        this.lastModifiedDate = data.CreatedDate;
+      else this.lastModifiedDate = data.CreatedDate;
       this.error = undefined;
       var username;
       var password;
@@ -60,7 +63,7 @@ export default class ScratchOrgDetailsHome extends LightningElement {
           createdby = element.replace("Created By ", "");
         } else if (element.includes("Created Date ")) {
           element = element.replace("Created Date ", "");
-          createddate = Date.parse(element.trim());
+          createddate = Date.parse(element);
         } else if (element.includes("Access Token ")) {
           accesstoken = element.replace("Access Token ", "");
         } else if (element.includes("Dev Hub Id ")) {
@@ -86,25 +89,37 @@ export default class ScratchOrgDetailsHome extends LightningElement {
       this.recid = recid;
       this.orgname = orgname;
       this.status = status;
-      if((new Date(expirationdate).getTime() - new Date().getTime()) > 0 ){
-        const diffTime = Math.abs(new Date(expirationdate).getTime() - new Date().getTime());
+      if (new Date(expirationdate).getTime() - new Date().getTime() > 0) {
+        const diffTime = Math.abs(
+          new Date(expirationdate).getTime() - new Date().getTime()
+        );
         this.remainingDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         this.expired = false;
-      }else{
+      } else {
         this.remainingDays = 0;
         this.expired = true;
       }
-        
-      
     } else if (error) {
       this.error = error;
       this.record = undefined;
     }
   }
 
-  handleCopy (){
-    console.log(this.template.querySelector(".url").textContent);
-    this.template.querySelector(".url").select();
-    document.execCommand('copy');
+  handleCopy() {
+    var copytext =
+      "Instance URL " +
+      this.instanceurl +
+      "\nUsername " +
+      this.username +
+      "\nPassword " +
+      this.password +
+      "\nAlias " +
+      this.alias;
+    this.isSelected = !this.isSelected;
+    var hiddenInput = document.createElement("textArea");
+    hiddenInput.appendChild(document.createTextNode(copytext));
+    document.body.appendChild(hiddenInput);
+    hiddenInput.select();
+    document.execCommand("copy");
   }
 }

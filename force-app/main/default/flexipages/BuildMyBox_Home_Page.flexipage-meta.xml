@@ -26,11 +26,7 @@
             <componentName>orgStorageCountHome</componentName>
         </componentInstances>
         <componentInstances>
-            <componentInstanceProperties>
-                <name>context</name>
-                <value>GLOBAL</value>
-            </componentInstanceProperties>
-            <componentName>forceChatter:publisher</componentName>
+            <componentName>scratchorglimits</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>sidebar</name>

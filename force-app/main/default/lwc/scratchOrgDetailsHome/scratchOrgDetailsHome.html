@@ -7,7 +7,7 @@
                     <div class="url">
                         <div class="row slds-m-around_small">
                             <div>Login url </div>
-                            <div>
+                            <div class="test">
                                 {instanceurl}
                             </div>
                         </div>
@@ -25,14 +25,15 @@
                         <template if:false={expired}>
                             <div>
                                 <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
-                                    day="2-digit" weekday="long"></lightning-formatted-date-time> ({remainingDays} days remaining)
+                                    day="2-digit" weekday="long"></lightning-formatted-date-time> ({remainingDays} days
+                                remaining)
                             </div>
                         </template>
                         <template if:true={expired}>
                             <div>
                                 <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
-                                    day="2-digit" weekday="long"></lightning-formatted-date-time> 
-                                    <span class="slds-text-color_destructive"> (Expired)</span>
+                                    day="2-digit" weekday="long"></lightning-formatted-date-time>
+                                <span class="slds-text-color_destructive"> (Expired)</span>
                             </div>
                         </template>
                     </div>
@@ -64,17 +65,20 @@
             </lightning-layout-item>
 
             <lightning-layout-item alignment-bump="left">
-                <lightning-button-icon size="large" class="slds-m-right_large" onclick={handleCopy}
-                    icon-name="utility:copy" alternative-text="copy credentials">
-                </lightning-button-icon>
+                <lightning-button-stateful class="slds-m-right_medium" label-when-off="Copy" label-when-on="Copied"
+                    label-when-hover="Copied" icon-name-when-off="utility:copy_to_clipboard"
+                    icon-name-when-on="utility:check" icon-name-when-hover="utility:check" selected={isSelected}
+                    onclick={handleCopy}>
+                </lightning-button-stateful>
             </lightning-layout-item>
         </lightning-layout>
         <div slot="actions">
-            
-            As of <lightning-formatted-date-time value={lastModifiedDate} month="short"
-                    day="2-digit" weekday="long" hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
-                
+
+            As of <lightning-formatted-date-time value={lastModifiedDate} month="short" day="2-digit" weekday="long"
+                hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
+
         </div>
 
     </lightning-card>
+
 </template>

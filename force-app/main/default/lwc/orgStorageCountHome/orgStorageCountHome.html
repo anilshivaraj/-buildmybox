@@ -1,52 +1,34 @@
 <template>
     <lightning-card title="Scratch Org Data" icon-name="standard:reward">
-        <div class="slds-m-around_large">
-            <table style="width:100%">
-                <tr>
-                    <th>Object</th>
-                    <th class="slds-text-align_center">Count</th>
-                </tr>
-                <template iterator:it={record}>
-                    <tr key={it.value.name}>
-                        <td>{it.value.name}</td>
-                        <td class="slds-text-align_center">{it.value.count}</td>
+        <template if:false={record}>
+            <div class="slds-text-align_center">
+                <lightning-spinner alternative-text="Loading" size="large">Processing..</lightning-spinner>
+            </div>
+        </template>
+        <template if:true={record}>
+            <table class="slds-table slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Object">Object</div>
+                        </th>
+                        <th scope="col" class="slds-text-align_center">
+                            <div class="slds-truncate" title="Count">Count</div>
+                        </th>
                     </tr>
-                </template>
-
+                </thead>
+                <tbody>
+                    <template iterator:it={record}>
+                        <tr key={it.value.name}>
+                            <td>{it.value.name}</td>
+                            <td class="slds-text-align_center">{it.value.count}</td>
+                        </tr>
+                    </template>
+                </tbody>
             </table>
-        </div>
-        <div slot="actions">
-            Live Data
-        </div>
+            <div slot="actions">
+                Live Data
+            </div>
+        </template>
     </lightning-card>
-    <br>
-    <lightning-card title="Sandbox Limits" icon-name="standard:lightning_usage">
-        <div class="slds-m-around_small">
-            <table style="width:100%">
-                <tr>
-                    <th>NAME</th>
-                    <th class="slds-text-align_center">REMAINING</th>
-                    <th class="slds-text-align_center">MAXIMUM </th>
-                </tr>
-
-
-                <template iterator:it={listoflimits}>
-                    <tr key={it.value.Name}>
-                        <td>{it.value.Name}</td>
-                        <td>
-                            <div class="slds-float_right">{it.value.Remaining}</div>
-                        </td>
-                        <td class="slds-float_right"> {it.value.Max}</td>
-                    </tr>
-                </template>
-
-            </table>
-        </div>
-        <div slot="actions">
-            As of <lightning-formatted-date-time value={lastModifiedDate} month="short"
-                day="2-digit" weekday="long" hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
-                    
-        </div>
-    </lightning-card>
-    
 </template>

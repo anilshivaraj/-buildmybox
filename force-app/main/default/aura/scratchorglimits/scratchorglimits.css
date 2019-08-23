@@ -1,0 +1,5 @@
+.THIS .slds-progress-bar__value {
+  background: red;
+  height: 100%;
+  display: block;
+}

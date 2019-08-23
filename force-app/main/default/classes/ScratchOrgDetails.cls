@@ -84,6 +84,49 @@ public with sharing class ScratchOrgDetails {
         return details;
     }
 
-   
+	Public class wOrgLimit implements Comparable{
+        @AuraEnabled Public string sName{get;set;}
+        @AuraEnabled Public double iMaximum{get;set;}
+        @AuraEnabled Public double iCurrent{get;set;}
+        @AuraEnabled Public double percentage{get;set;}
+        Public Integer compareTo(Object objToCompare) {
+            return sName.compareTo(((wOrgLimit)objToCompare).sName);            
+	    }
+    }
+
+    @AuraEnabled
+    public static List<wOrgLimit> getScratchOrgDetailsfulllist() {
+        List<wOrgLimit> lOrgLimit = new List<wOrgLimit>();
+        for (System.OrgLimit aLimit: OrgLimits.getAll()) {
+            if(aLimit.getLimit()>0){
+                wOrgLimit oLimit = new wOrgLimit();
+                oLimit.iMaximum = aLimit.getLimit();
+                oLimit.sName = aLimit.getName();
+                oLimit.iCurrent = aLimit.getValue();
+                
+                if(oLimit.iCurrent==0){
+                    oLimit.percentage = 0;
+                }
+                else{
+                    oLimit.percentage = Math.round((oLimit.iCurrent/oLimit.iMaximum)*100);
+                }
+
+                if(oLimit.sName == 'DataStorageMB' && oLimit.iMaximum>10000){
+                    oLimit.sName = '*DataStorageGB';
+                    oLimit.iMaximum = (oLimit.iMaximum/1000).round();
+                    oLimit.iCurrent = (oLimit.iCurrent/1000).round();
+                }
+                else if(oLimit.sName == 'FileStorageMB' && oLimit.iMaximum>10000){
+                    oLimit.sName = '*FileStorageGB';
+                    oLimit.iMaximum = (oLimit.iMaximum/1000).round();
+                    oLimit.iCurrent = (oLimit.iCurrent/1000).round();
+                }
+                lOrgLimit.add(oLimit);
+            }
+        }
+        lOrgLimit.sort();    
+
+        return lOrgLimit;
+    }   
    
 }
