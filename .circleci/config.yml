@@ -61,8 +61,6 @@ jobs:
                 sfdx force:source:push -u $REQUEST_ID
                 sfdx force:org:display -u $REQUEST_ID
 
-                sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
-                sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
@@ -73,6 +71,9 @@ jobs:
                 sfdx force:data:bulk:upsert -s Sector__c -f ~/ci_app/data/sectors.csv -w 1 -i Sector_Id__c -u $REQUEST_ID
                 sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
 
+                if [[ $EBIKES == true ]]; then
+                  sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
+                fi
                 if [[ $NoTI5 == true ]]; then
                   sfdx force:user:permset:assign -n NoTi5 -u $REQUEST_ID
                 fi
@@ -89,7 +90,7 @@ jobs:
                   sfdx force:user:permset:assign -n dreamhouse -u $REQUEST_ID
                 fi
                 if [[ $DREAMINVEST == true ]]; then
-                  sfdx force:user:permset:assign -n DreamInvest -u $REQUEST_ID
+                  sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
                 fi
                 
                 sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Req_ID__c='$REQUEST_URL' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
