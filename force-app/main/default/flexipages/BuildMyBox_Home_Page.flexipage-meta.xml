@@ -29,7 +29,6 @@
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>BuildMyBox Home Page</masterLabel>
-    <parentFlexiPage>home__desktopDefault</parentFlexiPage>
     <template>
         <name>home:desktopTemplate</name>
     </template>
