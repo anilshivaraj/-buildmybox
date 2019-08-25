@@ -70,7 +70,7 @@ jobs:
             sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
 
             if [[ $NoTI5 == true ]]; then
-              echo $NoTI5 "in noti5"
+              sfdx force:user:permset:assign -n NoTi5 -u $REQUEST_ID
             fi
             if [[ $RECIPES == true ]]; then
               sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
