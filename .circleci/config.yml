@@ -52,48 +52,52 @@ jobs:
 
             sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
             sfdx force:user:password:generate --targetusername $REQUEST_ID
-            sfdx force:source:push -u $REQUEST_ID
-            sfdx force:org:display -u $REQUEST_ID
 
-            sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
-            sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
-            sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
-            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
-            sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
-            sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
-            sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
-            sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
-            sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
-            sfdx force:data:bulk:upsert -s Sector__c -f ~/ci_app/data/sectors.csv -w 1 -i Sector_Id__c -u $REQUEST_ID
-            sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
+            if [[ $VANILLAORG == false ]]; then
+                sfdx force:source:push -u $REQUEST_ID
+                sfdx force:org:display -u $REQUEST_ID
 
-            if [[ $NoTI5 == true ]]; then
-              sfdx force:user:permset:assign -n NoTi5 -u $REQUEST_ID
-            fi
-            if [[ $RECIPES == true ]]; then
-              sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
-            fi
-            if [[ $CHARTJS == true ]]; then
-              sfdx force:user:permset:assign -n chartjs_admin -u $REQUEST_ID
-            fi
-            if [[ $PUREALOE == true ]]; then
-              sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
-            fi
-            if [[ $DREAMHOUSE == true ]]; then
-              sfdx force:user:permset:assign -n dreamhouse -u $REQUEST_ID
-            fi
-            if [[ $DREAMINVEST == true ]]; then
-              sfdx force:user:permset:assign -n DreamInvest -u $REQUEST_ID
+                sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
+                sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
+                sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
+                sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
+                sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
+                sfdx force:data:bulk:upsert -s Sector__c -f ~/ci_app/data/sectors.csv -w 1 -i Sector_Id__c -u $REQUEST_ID
+                sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
+
+                if [[ $NoTI5 == true ]]; then
+                  sfdx force:user:permset:assign -n NoTi5 -u $REQUEST_ID
+                fi
+                if [[ $RECIPES == true ]]; then
+                  sfdx force:user:permset:assign -n recipes -u $REQUEST_ID
+                fi
+                if [[ $CHARTJS == true ]]; then
+                  sfdx force:user:permset:assign -n chartjs_admin -u $REQUEST_ID
+                fi
+                if [[ $PUREALOE == true ]]; then
+                  sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
+                fi
+                if [[ $DREAMHOUSE == true ]]; then
+                  sfdx force:user:permset:assign -n dreamhouse -u $REQUEST_ID
+                fi
+                if [[ $DREAMINVEST == true ]]; then
+                  sfdx force:user:permset:assign -n DreamInvest -u $REQUEST_ID
+                fi
+
+                export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
+                echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
+                echo $SCRATCH_DETAILS
+                export SCRATCH_LIMITS="$(eval sfdx force:limits:api:display -u $REQUEST_ID)"
+                echo "$SCRATCH_LIMITS" > SCRATCH_LIMITS.TXT
+                echo $SCRATCH_LIMITS
+                sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Sandbox_Limits__c='$SCRATCH_LIMITS' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
             fi
 
-            export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
-            echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
-            echo $SCRATCH_DETAILS
-            export SCRATCH_LIMITS="$(eval sfdx force:limits:api:display -u $REQUEST_ID)"
-            echo "$SCRATCH_LIMITS" > SCRATCH_LIMITS.TXT
-            echo $SCRATCH_LIMITS
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Scratch_Org_Details__c='$SCRATCH_DETAILS' Status__c='Scratch Org Created'" -u HubOrg
-            sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Sandbox_Limits__c='$SCRATCH_LIMITS' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
 
             # sfdx force:source:convert -r force-app -d testDeploy 
             # sfdx force:mdapi:deploy -d testDeploy/ -u sandbox -w 20
