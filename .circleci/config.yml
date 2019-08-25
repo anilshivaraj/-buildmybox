@@ -50,7 +50,7 @@ jobs:
             sfdx force:org:list --all
 
             if [[ $APPPERMISSIONS == 'NoTi-5;Recipes;E-Bikes;Pure-Aloe;Easy-spaces' ]]; then
-              echo ${APPPERMISSIONS} "we are here"
+              echo $APPPERMISSIONS "we are here"
             else
               echo "we are not here"
             fi
