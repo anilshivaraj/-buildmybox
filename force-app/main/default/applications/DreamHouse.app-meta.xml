@@ -12,7 +12,6 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>DreamHouse</label>
     <navType>Standard</navType>
-    <tabs>standard-home</tabs>
     <tabs>Property_Finder</tabs>
     <tabs>Property_Explorer</tabs>
     <tabs>Property__c</tabs>
