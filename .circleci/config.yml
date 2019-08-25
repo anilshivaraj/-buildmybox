@@ -51,6 +51,8 @@ jobs:
 
             if [[ $APPPERMISSIONS == 'NoTi-5;Recipes;E-Bikes;Pure-Aloe;Easy-spaces' ]]; then
               echo $APPPERMISSIONS "we are here"
+            else if [[ $APPPERMISSIONS == 'NoTi-5;Recipes;E-Bikes;Pure-Aloe' ]]; then
+              echo $APPPERMISSIONS "we are in 2 loop"
             else
               echo "we are not here"
             fi
