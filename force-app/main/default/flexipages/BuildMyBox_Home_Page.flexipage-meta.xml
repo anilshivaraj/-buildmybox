@@ -4,20 +4,17 @@
         <componentInstances>
             <componentName>scratchOrgDetailsHome</componentName>
         </componentInstances>
-	<componentInstances>
+        <componentInstances>
             <componentName>scratchOrgChanges</componentName>
         </componentInstances>
-        <mode>Replace</mode>
         <name>top</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <mode>Replace</mode>
         <name>bottomLeft</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <mode>Replace</mode>
         <name>bottomRight</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -28,7 +25,6 @@
         <componentInstances>
             <componentName>scratchorglimits</componentName>
         </componentInstances>
-        <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
