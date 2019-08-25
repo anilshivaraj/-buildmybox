@@ -3,7 +3,7 @@
     <fullName>Req_ID__c</fullName>
     <externalId>false</externalId>
     <label>Req ID</label>
-    <length>50</length>
+    <length>255</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

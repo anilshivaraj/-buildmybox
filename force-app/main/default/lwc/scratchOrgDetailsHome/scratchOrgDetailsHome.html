@@ -48,9 +48,8 @@
                     <div class="row slds-m-around_small">
                         <div>Req ID</div>
                         <div>
-                            <lightning-formatted-url
-                                value="https://deloittecli.lightning.force.com/lightning/r/Request_Scratch_Org__c/a053i0000018L7TAAU/view"
-                                tooltip="Go to Req-0001" label="Req-0001" target="_blank"></lightning-formatted-url>
+                            <lightning-formatted-url value={requrl} tooltip={recid} label={alias} target="_blank">
+                            </lightning-formatted-url>
                         </div>
                     </div>
                     <div class="row slds-m-around_small">

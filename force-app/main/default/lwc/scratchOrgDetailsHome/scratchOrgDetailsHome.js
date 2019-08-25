@@ -20,10 +20,13 @@ export default class ScratchOrgDetailsHome extends LightningElement {
   remainingDays;
   expired;
   lastModifiedDate;
+  requrl;
 
   @wire(getScratchOrgDetails) contact({ error, data }) {
     if (data) {
       this.record = data.Org_Details__c;
+      this.requrl =
+        data.Req_ID__c + "/lightning/r/Request_Scratch_Org__c/" + data.Id;
       if (
         data.Components_Changed_Time__c != null &&
         data.Components_Changed_Time__c != ""
