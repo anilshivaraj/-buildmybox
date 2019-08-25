@@ -81,11 +81,11 @@ jobs:
             if [[ $PUREALOE == true ]]; then
               sfdx force:user:permset:assign -n purealoe -u $REQUEST_ID
             fi
-            if [[ $EASYSPACES == true ]]; then
-              echo $EASYSPACES "in EASYSPACES"
-            fi
             if [[ $DREAMHOUSE == true ]]; then
               sfdx force:user:permset:assign -n dreamhouse -u $REQUEST_ID
+            fi
+            if [[ $DREAMINVEST == true ]]; then
+              sfdx force:user:permset:assign -n DreamInvest -u $REQUEST_ID
             fi
 
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
@@ -96,8 +96,6 @@ jobs:
             echo $SCRATCH_LIMITS
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Scratch_Org_Details__c='$SCRATCH_DETAILS' Status__c='Scratch Org Created'" -u HubOrg
             sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Sandbox_Limits__c='$SCRATCH_LIMITS' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
-
-
 
             # sfdx force:source:convert -r force-app -d testDeploy 
             # sfdx force:mdapi:deploy -d testDeploy/ -u sandbox -w 20
