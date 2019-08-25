@@ -50,7 +50,7 @@ jobs:
             sfdx force:org:list --all
 
             case "kiwi" in
-              "apple") echo "Apple pie is quite tasty." 
+              "applekiwi") echo "Apple pie is quite tasty." 
               ;;
               "banana") echo "I like banana nut bread." 
               ;;
