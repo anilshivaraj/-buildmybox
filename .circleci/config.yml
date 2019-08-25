@@ -91,10 +91,8 @@ jobs:
                 export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
                 echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
                 echo $SCRATCH_DETAILS
-                export SCRATCH_LIMITS="$(eval sfdx force:limits:api:display -u $REQUEST_ID)"
-                echo "$SCRATCH_LIMITS" > SCRATCH_LIMITS.TXT
-                echo $SCRATCH_LIMITS
-                sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Sandbox_Limits__c='$SCRATCH_LIMITS' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
+                
+                sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Req_ID__c='$REQUEST_URL' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
             fi
 
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Scratch_Org_Details__c='$SCRATCH_DETAILS' Status__c='Scratch Org Created'" -u HubOrg
