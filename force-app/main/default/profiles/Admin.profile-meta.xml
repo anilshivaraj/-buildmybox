@@ -738,6 +738,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Picture__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Fund__c.Abbreviation__c</field>
         <readable>true</readable>
     </fieldPermissions>
