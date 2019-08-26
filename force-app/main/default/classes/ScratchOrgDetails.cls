@@ -94,32 +94,6 @@ public with sharing class ScratchOrgDetails {
         return details;
     }
 
-    @AuraEnabled
-    public static wOrgLimitDetails getScratchOrgDetailsforflow() {
-        Map<String,System.OrgLimit> limitsMap = OrgLimits.getMap();
-        
-        //Total Scratch Org
-        wOrgLimitDetails wObj = new wOrgLimitDetails();
-        wObj.totalActiveScratchOrgsMax = limitsMap.get('ActiveScratchOrgs').getLimit();
-        wObj.totalActiveScratchOrgsCurrent = limitsMap.get('ActiveScratchOrgs').getValue();
-       
-        wObj.totalActiveScratchOrgPercent =  Math.round((wObj.totalActiveScratchOrgsCurrent/wObj.totalActiveScratchOrgsMax) * 100);
-        
-        //Daily Scratch Org
-        wObj.dailyScratchOrgsMax = limitsMap.get('DailyScratchOrgs').getLimit();
-        wObj.dailyScratchOrgsCurrent = limitsMap.get('DailyScratchOrgs').getValue();
-        
-        wObj.dailyScratchOrgPercent =  Math.round((wObj.dailyScratchOrgsCurrent/wObj.dailyScratchOrgsMax) * 100);
-        
-
-        wObj.yourActiveScratchOrgs =  [Select count() from ActiveScratchOrg where Requested_User__c =: UserInfo.getUserId()];
-        wObj.yourAllowedActiveScratchOrgs =  BuildMyBox__c.getValues('CircleCI Setup Values').of_Active_Scratch_Orgs_for_User__c;
-        
-        wObj.yourAllowedActiveScratchOrgsPercent =  Math.round((wObj.yourActiveScratchOrgs/wObj.yourAllowedActiveScratchOrgs) * 100);
-        
-        return wObj;
-    }
-
     Public class wOrgLimitDetails{
         @AuraEnabled Public Integer totalActiveScratchOrgsMax;
         @AuraEnabled Public Decimal totalActiveScratchOrgsCurrent;
