@@ -93,7 +93,7 @@ jobs:
                   sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
                 fi
                 
-                sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' Req_ID__c='$REQUEST_URL' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
+                sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' ReqID__c='$REQUEST_ID' ReqSFID__c='$REQUEST_SFID' Req_ID__c='$REQUEST_URL' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
             fi
 
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Scratch_Org_Details__c='$SCRATCH_DETAILS' Status__c='Scratch Org Created'" -u HubOrg
