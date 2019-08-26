@@ -1,7 +1,7 @@
 import { LightningElement, api, wire, track } from "lwc";
 import getScratchOrgChanges from "@salesforce/apex/ScratchOrgDetails.getScratchOrgChanges";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
-import checkdiffOrg from "@salesforce/apex/DECI_CreateScratchOrg.checkdiff";
+//import checkdiffOrg from "@salesforce/apex/DECI_CreateScratchOrg.checkdiff";
 
 export default class ScratchOrgChanges extends LightningElement {
   @api recordId;
@@ -75,10 +75,10 @@ export default class ScratchOrgChanges extends LightningElement {
       })
     );
 
-    checkdiffOrg({
+    /*checkdiffOrg({
       RequestId: this.reqid,
       RequestSFId: this.reqsfid,
       ScratchOrgUserName: this.username
-    });
+    });*/
   }
 }
