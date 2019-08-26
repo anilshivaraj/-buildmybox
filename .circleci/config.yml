@@ -53,4 +53,4 @@ jobs:
 
 
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Components_Changed__c='$SCRATCH_DIFF' Diff_Status__c='Completed'" -u HubOrg
-            sfdx force:data:record:update -s Scratch_Org_Creds__c -w "Name='ScratchOrgDetails'" -v "Components_Changed__c='$SCRATCH_DIFF'" -u $REQUEST_ID
+            sfdx force:data:record:update -s Scratch_Org_Creds__c -w "Name='ScratchOrgDetails'" -v "Components_Changed__c='$SCRATCH_DIFF' Components_Change_Updated__c=true" -u $REQUEST_ID
