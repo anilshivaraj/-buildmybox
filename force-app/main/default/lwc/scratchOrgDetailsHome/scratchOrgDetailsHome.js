@@ -26,7 +26,10 @@ export default class ScratchOrgDetailsHome extends LightningElement {
     if (data) {
       this.record = data.Org_Details__c;
       this.requrl =
-        data.Req_ID__c + "/lightning/r/Request_Scratch_Org__c/" + data.Id;
+        data.Req_ID__c +
+        "/lightning/r/Request_Scratch_Org__c/" +
+        data.ReqSFID__c +
+        "/view";
       if (
         data.Components_Changed_Time__c != null &&
         data.Components_Changed_Time__c != ""

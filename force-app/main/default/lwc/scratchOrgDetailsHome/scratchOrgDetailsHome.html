@@ -1,83 +1,90 @@
 <template>
     <lightning-card title="Scratch Org Details" icon-name="standard:reward">
-        <lightning-layout>
+        <template if:false={username}>
+            <div class="slds-text-align_center">
+                <lightning-spinner alternative-text="Loading" size="large">Processing..</lightning-spinner>
+            </div>
+        </template>
+        <template if:true={username}>
+            <lightning-layout>
 
-            <lightning-layout-item>
-                <div class="slds-m-left_small">
-                    <div class="url">
-                        <div class="row slds-m-around_small">
-                            <div>Login url </div>
-                            <div class="test">
-                                {instanceurl}
+                <lightning-layout-item>
+                    <div class="slds-m-left_small">
+                        <div class="url">
+                            <div class="row slds-m-around_small">
+                                <div>Login url </div>
+                                <div class="test">
+                                    {instanceurl}
+                                </div>
+                            </div>
+                            <div class="row slds-m-around_small">
+                                <div> Username </div>
+                                <div>{username}</div>
+                            </div>
+                            <div class="row slds-m-around_small">
+                                <div> Password </div>
+                                <div>{password}</div>
                             </div>
                         </div>
                         <div class="row slds-m-around_small">
-                            <div> Username </div>
-                            <div>{username}</div>
+                            <div>Expiration Date</div>
+                            <template if:false={expired}>
+                                <div>
+                                    <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
+                                        day="2-digit" weekday="long"></lightning-formatted-date-time> ({remainingDays}
+                                    days
+                                    remaining)
+                                </div>
+                            </template>
+                            <template if:true={expired}>
+                                <div>
+                                    <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
+                                        day="2-digit" weekday="long"></lightning-formatted-date-time>
+                                    <span class="slds-text-color_destructive"> (Expired)</span>
+                                </div>
+                            </template>
                         </div>
                         <div class="row slds-m-around_small">
-                            <div> Password </div>
-                            <div>{password}</div>
+                            <div>Org Alias(For SFDX)</div>
+                            <div>{alias}</div>
                         </div>
-                    </div>
-                    <div class="row slds-m-around_small">
-                        <div>Expiration Date</div>
-                        <template if:false={expired}>
+                        <div class="row slds-m-around_small">
+                            <div>Edition</div>
+                            <div>{edition}</div>
+                        </div>
+                        <div class="row slds-m-around_small">
+                            <div>Req ID</div>
                             <div>
-                                <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
-                                    day="2-digit" weekday="long"></lightning-formatted-date-time> ({remainingDays} days
-                                remaining)
+                                <lightning-formatted-url value={requrl} tooltip={recid} label={alias} target="_blank">
+                                </lightning-formatted-url>
                             </div>
-                        </template>
-                        <template if:true={expired}>
+                        </div>
+                        <div class="row slds-m-around_small">
+                            <div>Scratch Org Created Date</div>
                             <div>
-                                <lightning-formatted-date-time value={expirationdate} year="2-digit" month="short"
-                                    day="2-digit" weekday="long"></lightning-formatted-date-time>
-                                <span class="slds-text-color_destructive"> (Expired)</span>
+                                <lightning-formatted-date-time value={createddate} year="numeric" month="numeric"
+                                    day="numeric" hour="2-digit" minute="2-digit" time-zone-name="short" hour12="true">
+                                </lightning-formatted-date-time>
                             </div>
-                        </template>
-                    </div>
-                    <div class="row slds-m-around_small">
-                        <div>Org Alias(For SFDX)</div>
-                        <div>{alias}</div>
-                    </div>
-                    <div class="row slds-m-around_small">
-                        <div>Edition</div>
-                        <div>{edition}</div>
-                    </div>
-                    <div class="row slds-m-around_small">
-                        <div>Req ID</div>
-                        <div>
-                            <lightning-formatted-url value={requrl} tooltip={recid} label={alias} target="_blank">
-                            </lightning-formatted-url>
                         </div>
                     </div>
-                    <div class="row slds-m-around_small">
-                        <div>Scratch Org Created Date</div>
-                        <div>
-                            <lightning-formatted-date-time value={createddate} year="numeric" month="numeric"
-                                day="numeric" hour="2-digit" minute="2-digit" time-zone-name="short" hour12="true">
-                            </lightning-formatted-date-time>
-                        </div>
-                    </div>
-                </div>
-            </lightning-layout-item>
+                </lightning-layout-item>
 
-            <lightning-layout-item alignment-bump="left">
-                <lightning-button-stateful class="slds-m-right_medium" label-when-off="Copy" label-when-on="Copied"
-                    label-when-hover="Copied" icon-name-when-off="utility:copy_to_clipboard"
-                    icon-name-when-on="utility:check" icon-name-when-hover="utility:check" selected={isSelected}
-                    onclick={handleCopy}>
-                </lightning-button-stateful>
-            </lightning-layout-item>
-        </lightning-layout>
-        <div slot="actions">
+                <lightning-layout-item alignment-bump="left">
+                    <lightning-button-stateful class="slds-m-right_medium" label-when-off="Copy" label-when-on="Copied"
+                        label-when-hover="Copied" icon-name-when-off="utility:copy_to_clipboard"
+                        icon-name-when-on="utility:check" icon-name-when-hover="utility:check" selected={isSelected}
+                        onclick={handleCopy}>
+                    </lightning-button-stateful>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div slot="actions">
 
-            As of <lightning-formatted-date-time value={lastModifiedDate} month="short" day="2-digit" weekday="long"
-                hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
+                As of <lightning-formatted-date-time value={lastModifiedDate} month="short" day="2-digit" weekday="long"
+                    hour="2-digit" minute="2-digit" hour12="true"></lightning-formatted-date-time>
 
-        </div>
-
+            </div>
+        </template>
     </lightning-card>
 
 </template>
