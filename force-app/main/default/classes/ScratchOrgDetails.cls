@@ -65,7 +65,7 @@ public with sharing class ScratchOrgDetails {
         
         for(Schema.SObjectType o : Schema.getGlobalDescribe().Values()){
             Schema.DescribeSObjectResult objResult = o.getDescribe();
-            if(objResult.getKeyPrefix()!=null && objResult.isCustomSetting()==false &&
+            if(objResult.getKeyPrefix()!=null && objResult.isCustomSetting()==false && !objResult.getName().contains('__e') &&
                 (objResult.isCustom() || standardobjects.contains(objResult.getName()))){ 
                     SObjects obj = new SObjects();
                     obj.count = Database.countQuery('SELECT count() FROM '+objResult.getName());
