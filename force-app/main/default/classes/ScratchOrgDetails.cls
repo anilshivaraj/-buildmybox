@@ -96,7 +96,7 @@ public with sharing class ScratchOrgDetails {
 
     @AuraEnabled
     public static List<wOrgLimit> getScratchOrgDetailsfulllist() {
-        List<wOrgLimit> lOrgLimit = new List<wOrgLimit>();
+         List<wOrgLimit> lOrgLimit = new List<wOrgLimit>();
         for (System.OrgLimit aLimit: OrgLimits.getAll()) {
             if(aLimit.getLimit()>0){
                 wOrgLimit oLimit = new wOrgLimit();
@@ -120,6 +120,12 @@ public with sharing class ScratchOrgDetails {
                     oLimit.sName = '*FileStorageGB';
                     oLimit.iMaximum = (oLimit.iMaximum/1000).round();
                     oLimit.iCurrent = (oLimit.iCurrent/1000).round();
+                }
+                else if(oLimit.sName == 'DataStorageMB'){
+                     oLimit.sName = '*DataStorageMB';
+                }
+                else if(oLimit.sName == 'FileStorageMB'){
+                     oLimit.sName = '*FileStorageMB';
                 }
                 lOrgLimit.add(oLimit);
             }

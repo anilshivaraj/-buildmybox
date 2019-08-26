@@ -19,9 +19,17 @@
                 <behavior>Edit</behavior>
                 <field>Components_Changed_Time__c</field>
             </layoutItems>
-		<layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Components_Change_Updated__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ReqSFID__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ReqID__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
@@ -36,10 +44,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Org_Details__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Sandbox_Limits__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
