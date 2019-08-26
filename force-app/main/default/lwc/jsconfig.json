@@ -392,6 +392,21 @@
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
+            ],
+            "c/noTi5": [
+                "noTi5/noTi5.js"
+            ],
+            "c/noTi5AddMultipleAudience": [
+                "noTi5AddMultipleAudience/noTi5AddMultipleAudience.js"
+            ],
+            "c/noTi5Chart": [
+                "noTi5Chart/noTi5Chart.js"
+            ],
+            "c/noTi5Lookup": [
+                "noTi5Lookup/noTi5Lookup.js"
+            ],
+            "c/noTi5SelectedUserDetails": [
+                "noTi5SelectedUserDetails/noTi5SelectedUserDetails.js"
             ]
         }
     },

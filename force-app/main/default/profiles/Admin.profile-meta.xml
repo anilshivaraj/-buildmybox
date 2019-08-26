@@ -826,6 +826,16 @@
         <field>Notification__c.Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Scratch_Org_Creds__c.ReqID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Scratch_Org_Creds__c.ReqSFID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <tabVisibilities>
         <tab>Interactive1</tab>
         <visibility>DefaultOn</visibility>
