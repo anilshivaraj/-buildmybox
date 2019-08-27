@@ -1,5 +1,4 @@
-public with sharing class ScratchOrgDetails {
-    
+public with sharing class ScratchOrg_ServiceHandler {
     @AuraEnabled(cacheable=true)
     public static Scratch_Org_Creds__c getScratchOrgDetails() {
         Scratch_Org_Creds__c details;
@@ -94,17 +93,7 @@ public with sharing class ScratchOrgDetails {
         return details;
     }
 
-    Public class wOrgLimitDetails{
-        @AuraEnabled Public Integer totalActiveScratchOrgsMax;
-        @AuraEnabled Public Decimal totalActiveScratchOrgsCurrent;
-        @AuraEnabled Public Decimal totalActiveScratchOrgPercent;
-        @AuraEnabled Public Integer dailyScratchOrgsCurrent;
-        @AuraEnabled Public Decimal dailyScratchOrgsMax;
-        @AuraEnabled Public Decimal dailyScratchOrgPercent;
-        @AuraEnabled Public Integer yourActiveScratchOrgs;
-        @AuraEnabled Public decimal yourAllowedActiveScratchOrgs;
-        @AuraEnabled Public decimal yourAllowedActiveScratchOrgsPercent;
-    }
+    
 
     Public class wOrgLimit implements Comparable{
         @AuraEnabled Public string sName{get;set;}
@@ -157,5 +146,4 @@ public with sharing class ScratchOrgDetails {
         return lOrgLimit;
     }
 
-   
 }

@@ -20,10 +20,10 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>orgStorageCountHome</componentName>
+            <componentName>scratchOrgStorageCount</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>scratchorglimits</componentName>
+            <componentName>devHubOrglimits</componentName>
         </componentInstances>
         <name>sidebar</name>
         <type>Region</type>

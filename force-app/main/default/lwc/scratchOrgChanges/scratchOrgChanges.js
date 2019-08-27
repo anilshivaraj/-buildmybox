@@ -1,5 +1,5 @@
 import { LightningElement, api, wire, track } from "lwc";
-import getScratchOrgChanges from "@salesforce/apex/ScratchOrgDetails.getScratchOrgChanges";
+import getScratchOrgChanges from "@salesforce/apex/ScratchOrg_ServiceHandler.getScratchOrgChanges";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 //import checkdiffOrg from "@salesforce/apex/DECI_CreateScratchOrg.checkdiff";
 

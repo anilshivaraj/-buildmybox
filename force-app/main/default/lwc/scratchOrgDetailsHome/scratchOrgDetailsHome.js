@@ -1,5 +1,5 @@
 import { LightningElement, wire, track } from "lwc";
-import getScratchOrgDetails from "@salesforce/apex/ScratchOrgDetails.getScratchOrgDetails";
+import getScratchOrgDetails from "@salesforce/apex/ScratchOrg_ServiceHandler.getScratchOrgDetails";
 
 export default class ScratchOrgDetailsHome extends LightningElement {
   @track isSelected = false;

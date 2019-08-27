@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="ScratchOrgDetails">
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="ScratchOrg_ServiceHandler">
     <aura:attribute name="wrapperList" type="object" />
 
     <aura:handler name="init" value="{!this}" action="{!c.getdetailsonload}" />
@@ -11,13 +11,13 @@
                         <div class="slds-truncate" title="Opportunity Name">Name</div>
                     </th>
                     <th scope="col">
-                        <div class="slds-truncate" title="Account Name">CURRENT</div>
+                        <div class="slds-truncate slds-text-align_right" title="Account Name">CURRENT</div>
                     </th>
                     <th scope="col">
-                        <div class="slds-truncate" title="Close Date">MAXIMUM</div>
+                        <div class="slds-truncate slds-text-align_right" title="Close Date">MAXIMUM</div>
                     </th>
                     <th scope="col">
-                        <div class="slds-truncate" title="Close Date">Status</div>
+                        <div class="slds-truncate slds-text-align_center" title="Close Date">Status</div>
                     </th>
 
                 </tr>
