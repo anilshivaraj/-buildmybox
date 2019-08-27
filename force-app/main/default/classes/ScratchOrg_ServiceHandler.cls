@@ -10,14 +10,14 @@ public with sharing class ScratchOrg_ServiceHandler {
     }
 
     @AuraEnabled(cacheable=true)
-    public static List<ScratchOrgDetails.sObjects> getOrgCountDetails() {
+    public static List<ScratchOrg_ServiceHandler.sObjects> getOrgCountDetails() {
         string sOrgCount;
         for(Scratch_Org_Creds__c oDetails : [Select id,Org_Details__c,Data__c from Scratch_Org_Creds__c where name=:'ScratchOrgDetails' limit 1]){
             sOrgCount = oDetails.Data__c;
             break;
         }
 
-        ScratchOrgDetails details =  (ScratchOrgDetails) System.JSON.deserialize(sOrgCount, ScratchOrgDetails.class);
+        ScratchOrg_ServiceHandler details =  (ScratchOrg_ServiceHandler) System.JSON.deserialize(sOrgCount, ScratchOrg_ServiceHandler.class);
         details.sObjects.sort();
         return details.sObjects;
     }
