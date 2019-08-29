@@ -260,10 +260,10 @@ public class Noti5_NotificationUtility {
             }
         }
 
-        for(User usr : [Select Id, isActive from User where Id in :mUserCountNotResponded.keySet()]){
+        /*for(User usr : [Select Id, isActive from User where Id in :mUserCountNotResponded.keySet()]){
             if(usr.isActive == false)
                 mUserCountNotResponded.remove(usr.Id);
-        }
+        }*/
 
         List<wWallOfShameUserList> lUsers = mUserCountNotResponded.values();
         lUsers.sort();
@@ -329,10 +329,10 @@ public class Noti5_NotificationUtility {
             }
         }
 
-        for(User usr : [Select Id, isActive from User where Id in :sTotalUserIds]){
+        /*for(User usr : [Select Id, isActive from User where Id in :sTotalUserIds]){
             if(usr.isActive == false)
                 sTotalUserIds.remove(usr.Id);
-        }
+        }*/
 
         oMetrics.acknowledged = sRespondedUserIds.size();
         oMetrics.totalaudience = sTotalUserIds.size();
@@ -413,10 +413,10 @@ public class Noti5_NotificationUtility {
             }
         }
         
-        for(User usr : [Select Id, isActive from User where Id in :sTotalUserIds]){
+        /*for(User usr : [Select Id, isActive from User where Id in :sTotalUserIds]){
             if(usr.isActive == false)
                 sTotalUserIds.remove(usr.Id);
-        }
+        }*/
         
         Map<Id,wUserDetails> mUserdetails = new Map<Id,wUserDetails>();
 
