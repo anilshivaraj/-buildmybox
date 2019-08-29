@@ -1,0 +1,18 @@
+[
+    {
+        "sobject": "Notification__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "notification-demo.json"
+        ]
+    },
+	{
+        "sobject": "UserRole",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "notification-userrole-demo.json"
+        ]
+    }
+]

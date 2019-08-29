@@ -1,0 +1,20 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "UserRole",
+                "referenceId": "UserRoleRef1"
+            },
+            "DeveloperName": "MyCustomRole1",
+            "Name": "My Role1"
+        },
+		{
+            "attributes": {
+                "type": "UserRole",
+                "referenceId": "UserRoleRef2"
+            },
+            "DeveloperName": "MyCustomRole2",
+            "Name": "My Role2"
+        }
+	]
+}

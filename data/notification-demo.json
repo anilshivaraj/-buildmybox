@@ -1,0 +1,40 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Notification__c",
+                "referenceId": "NotificationRef1"
+            },
+            "Message__c": "Workplace Harassment & Discrimination Prevention. All faculty and staff are required to complete the web-based mandatory training by June 30, 2019",
+            "Priority__c": "Critical",
+            "Status__c": "Notification Sent"
+        },
+		{
+            "attributes": {
+                "type": "Notification__c",
+                "referenceId": "NotificationRef2"
+            },
+            "Message__c": "Bargaining Unit 10 Dependent Health Vesting Elimination -  The Bargaining Unit 10 contract is ratified. Dependent health vesting is eliminated effective July 1, 2018.",
+            "Priority__c": "High",
+            "Status__c": "Notification Sent"
+        },
+		{
+            "attributes": {
+                "type": "Notification__c",
+                "referenceId": "NotificationRef3"
+            },
+            "Message__c": "Dependent Re-Verification (DRV) - Beginning with the May birth month DRV cycle, HR offices are not required to re-verify eligibility of employee dependents for continued enrollment in Premier Vision benefits. HR offices will continue to re-verify employee dependents for state-sponsored health and dental benefits.",
+            "Priority__c": "Critical",
+            "Status__c": "Notification Sent"
+        },
+		{
+            "attributes": {
+                "type": "Notification__c",
+                "referenceId": "NotificationRef4"
+            },
+            "Message__c": "OPEB Changes Effective July 1, 2018 - Excluded and exempt employees not directly associated with a bargaining unit, e.g., E48, E97, E98, and E99, will begin prefunding 0.8% of their pensionable compensation to Other Post-Employment Benefits (OPEB) effective July 1, 2018. There will be a matching employer contribution",
+            "Priority__c": "Info",
+            "Status__c": "Notification Sent"
+        }
+	]
+}
