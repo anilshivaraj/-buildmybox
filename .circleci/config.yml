@@ -48,7 +48,7 @@ jobs:
           command: |
             sfdx force:org:list --all
             # sfdx force:auth:jwt:grant --clientid $CLIENT_ID_SECONDARY --jwtkeyfile assets/server.key --username test-zox61dwem2v7@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
-            sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
+            sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
             sfdx force:user:password:generate --targetusername $REQUEST_ID
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
@@ -61,7 +61,7 @@ jobs:
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/userdata.apex -u $REQUEST_ID
-                sfdx force:apex:execute -f ~/ci_app/data/notification-data.apex -u $REQUEST_ID
+                # sfdx force:apex:execute -f ~/ci_app/data/notification-data.apex -u $REQUEST_ID
                 sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
                 sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
                 sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
