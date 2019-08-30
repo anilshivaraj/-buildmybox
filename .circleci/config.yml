@@ -47,8 +47,8 @@ jobs:
           name: Create Scratch Org and Deploy code
           command: |
             sfdx force:org:list --all
-            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_SECONDARY --jwtkeyfile assets/server.key --username test-pl06ihivpqji@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
-            # sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
+            # sfdx force:auth:jwt:grant --clientid $CLIENT_ID_SECONDARY --jwtkeyfile assets/server.key --username test-pl06ihivpqji@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
+            sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
             # sfdx force:user:password:generate --targetusername $REQUEST_ID
             # sfdx force:user:password:generate --targetusername test-pl06ihivpqji@example.com
 
