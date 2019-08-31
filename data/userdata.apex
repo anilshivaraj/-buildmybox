@@ -1,163 +1,21 @@
 List<UserRole> listRoles = [Select Id, Name, DeveloperName from UserRole where DeveloperName = 'Assistant_Media_Planner' or DeveloperName = 'Desktop_Support_Technician'];
 
-List<User> listUser = new List<User>();
+List<User> listUser = [Select Id,Name from User where IsActive = false];
 
 List<Profile> listprofile = [SELECT Id, Name FROM Profile WHERE Name = 'Clinical Specialist' or Name = 'Product Engineer'];
 
 List<PermissionSet> listpermset = [SELECT Id, Name FROM PermissionSet WHERE Name = 'Combined_Federal_Campaign' or Name = 'Disability_insurance'];
 
-User u1 = new User(
-	LastName = 'Wanell',
-	FirstName = 'Patton',
-	Email = 'demonotificationuser1@example.com',
-	Username = 'demonotificationuser1@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[0].Id,
-	ProfileId = listprofile[0].Id,
-	IsActive  = false
-);
-User u2 = new User(
-	LastName = 'Sinisbury',
-	FirstName = 'Rudy',
-	Email = 'demonotificationuser2@example.com',
-	Username = 'demonotificationuser2@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[0].Id,
-	ProfileId = listprofile[0].Id,
-	IsActive  = false
-);
-User u3 = new User(
-	FirstName = 'Isadore',
-	LastName = 'Worstall',
-	Email = 'demonotificationuser3@example.com',
-	Username = 'demonotificationuser3@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[0].Id,
-	ProfileId = listprofile[0].Id,
-	IsActive  = false
-);
-User u4 = new User(
-	FirstName = 'Demetrius',
-	LastName = 'Haseman',
-	Email = 'demonotificationuser4@example.com',
-	Username = 'demonotificationuser4@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[0].Id,
-	ProfileId = listprofile[0].Id,
-	IsActive  = false
-);
-
-User u5 = new User(
-	
-	LastName = 'Joyner',
-	Email = 'demonotificationuser5@example.com',
-	Username = 'demonotificationuser5@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[1].Id,
-	ProfileId = listprofile[1].Id,
-	IsActive  = false
-);
-User u6 = new User(
-	FirstName = 'Law',
-	LastName = 'Drakes',
-	Email = 'demonotificationuser6@example.com',
-	Username = 'demonotificationuser6@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[1].Id,
-	ProfileId = listprofile[1].Id,
-	IsActive  = false
-);
-User u7 = new User(
-	FirstName = 'Gerrie',
-	LastName = 'Bentley',
-	Email = 'demonotificationuser7@example.com',
-	Username = 'demonotificationuser7@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[1].Id,
-	ProfileId = listprofile[1].Id,
-	IsActive  = false
-);
-User u8 = new User(
-	FirstName = 'Lynn',
-	LastName = 'Glas',
-	Email = 'demonotificationuser8@example.com',
-	Username = 'demonotificationuser8@example.com' + System.currentTimeMillis(),
-	CompanyName = 'TEST',
-	// Title = 'title',
-	Alias = 'alias',
-	TimeZoneSidKey = 'America/Los_Angeles',
-	EmailEncodingKey = 'UTF-8',
-	LanguageLocaleKey = 'en_US',
-	LocaleSidKey = 'en_US',
-	UserRoleId = listRoles[1].Id,
-	ProfileId = listprofile[1].Id,
-	IsActive  = false
-);
-
-listUser.add(u1);
-listUser.add(u2);
-listUser.add(u3);
-listUser.add(u4);
-listUser.add(u5);
-listUser.add(u6);
-listUser.add(u7);
-listUser.add(u8);
-
-
-insert listUser;
-
-List<PermissionSetAssignment> listpermset = new List<PermissionSetAssignment>();
+List<PermissionSetAssignment> listpermsetassign = new List<PermissionSetAssignment>();
 
 for(User oUser : listUser){
 	PermissionSetAssignment oPermissionSetAssignment1 = new PermissionSetAssignment(AssigneeId = oUser.Id, PermissionSetId = listpermset[0].Id );
 	PermissionSetAssignment oPermissionSetAssignment2 = new PermissionSetAssignment(AssigneeId = oUser.Id, PermissionSetId = listpermset[1].Id );
-	listpermset.add(oPermissionSetAssignment1);
-	listpermset.add(oPermissionSetAssignment2);
+	listpermsetassign.add(oPermissionSetAssignment1);
+	listpermsetassign.add(oPermissionSetAssignment2);
 }
 
-Insert listpermset;
+//Insert listpermsetassign;
 
 List<Notification__c> listnotifi = new List<Notification__c>();
 
@@ -195,7 +53,7 @@ Audience__c audience3 = new Audience__c(Notification__c = listnotifi[0].Id, Type
 Audience__c audience4 = new Audience__c(Notification__c = listnotifi[0].Id, Type__c = 'Role', Group_Id__c = listRoles[1].Id, Group_Name__c = listRoles[1].Name);
 Audience__c audienceadmin1 = new Audience__c(Notification__c = listnotifi[0].Id, Type__c = 'Profile', Group_Id__c = UserInfo.getProfileId(), Group_Name__c = 'System Administrator');
 
-udience__c audience5 = new Audience__c(Notification__c = listnotifi[1].Id, Type__c = 'Profile', Group_Id__c = listprofile[0].Id, Group_Name__c = listprofile[0].Name);
+Audience__c audience5 = new Audience__c(Notification__c = listnotifi[1].Id, Type__c = 'Profile', Group_Id__c = listprofile[0].Id, Group_Name__c = listprofile[0].Name);
 Audience__c audience6 = new Audience__c(Notification__c = listnotifi[1].Id, Type__c = 'Role', Group_Id__c = listRoles[0].Id, Group_Name__c = listRoles[0].Name);
 Audience__c audience7 = new Audience__c(Notification__c = listnotifi[1].Id, Type__c = 'Profile', Group_Id__c = listprofile[1].Id, Group_Name__c = listprofile[1].Name);
 Audience__c audience8 = new Audience__c(Notification__c = listnotifi[1].Id, Type__c = 'Role', Group_Id__c = listRoles[1].Id, Group_Name__c = listRoles[1].Name);
@@ -210,8 +68,8 @@ Audience__c audienceadmin3 = new Audience__c(Notification__c = listnotifi[2].Id,
 Audience__c audience13 = new Audience__c(Notification__c = listnotifi[3].Id, Type__c = 'Role', Group_Id__c = listRoles[0].Id, Group_Name__c = listRoles[0].Name);
 Audience__c audienceadmin4 = new Audience__c(Notification__c = listnotifi[3].Id, Type__c = 'Profile', Group_Id__c = UserInfo.getProfileId(), Group_Name__c = 'System Administrator');
 
-Audience__c audience14 = new Audience__c(Notification__c = listnotifi[4].Id, Type__c = 'Role', Group_Id__c = listRoles[1].Id, Group_Name__c = listRoles[1].Name);
-Audience__c audienceadmin5 = new Audience__c(Notification__c = listnotifi[4].Id, Type__c = 'Profile', Group_Id__c = UserInfo.getProfileId(), Group_Name__c = 'System Administrator');
+//Audience__c audience14 = new Audience__c(Notification__c = listnotifi[4].Id, Type__c = 'Role', Group_Id__c = listRoles[1].Id, Group_Name__c = listRoles[1].Name);
+//Audience__c audienceadmin5 = new Audience__c(Notification__c = listnotifi[4].Id, Type__c = 'Profile', Group_Id__c = UserInfo.getProfileId(), Group_Name__c = 'System Administrator');
 
 audiences.add(audience1);
 audiences.add(audience2);
@@ -226,13 +84,13 @@ audiences.add(audience10);
 audiences.add(audience11);
 audiences.add(audience12);
 audiences.add(audience13);
-audiences.add(audience14);
+//audiences.add(audience14);
 
 audiences.add(audienceadmin1);
 audiences.add(audienceadmin2);
 audiences.add(audienceadmin3);
 audiences.add(audienceadmin4);
-audiences.add(audienceadmin5);
+//audiences.add(audienceadmin5);
 
 insert audiences;
 
