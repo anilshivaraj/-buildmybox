@@ -4,18 +4,13 @@ List<User> listUser = [Select Id,Name from User where IsActive = false];
 
 List<Profile> listprofile = [SELECT Id, Name FROM Profile WHERE Name = 'Clinical Specialist' or Name = 'Product Engineer'];
 
-List<PermissionSet> listpermset = [SELECT Id, Name FROM PermissionSet WHERE Name = 'Combined_Federal_Campaign' or Name = 'Disability_insurance'];
+integer i=0;
 
-List<PermissionSetAssignment> listpermsetassign = new List<PermissionSetAssignment>();
-
-for(User oUser : listUser){
-	PermissionSetAssignment oPermissionSetAssignment1 = new PermissionSetAssignment(AssigneeId = oUser.Id, PermissionSetId = listpermset[0].Id );
-	PermissionSetAssignment oPermissionSetAssignment2 = new PermissionSetAssignment(AssigneeId = oUser.Id, PermissionSetId = listpermset[1].Id );
-	listpermsetassign.add(oPermissionSetAssignment1);
-	listpermsetassign.add(oPermissionSetAssignment2);
+for(ContentAsset oAsset : [SELECT ContentDocumentId, DeveloperName FROM ContentAsset where DeveloperName like 'image%' limit 8]){
+    ConnectApi.UserProfiles.setPhoto(null, listUser[i].Id, oAsset.ContentDocumentId,null);
+    i++;
 }
 
-//Insert listpermsetassign;
 
 List<Notification__c> listnotifi = new List<Notification__c>();
 

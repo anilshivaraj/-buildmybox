@@ -209,11 +209,5 @@ listUser.add(u8);
 
 
 insert listUser;
-integer i=0;
 
-
-for(ContentAsset oAsset : [SELECT ContentDocumentId, DeveloperName FROM ContentAsset where DeveloperName like 'image%' limit 8]){
-    ConnectApi.UserProfiles.setPhoto(null, listUser[i].Id, oAsset.ContentDocumentId,null);
-    i++;
-}
 
