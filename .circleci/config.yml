@@ -58,9 +58,9 @@ jobs:
                 sfdx force:source:push -u $REQUEST_ID
                 sfdx force:org:display -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
-                sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
-                sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
-                sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
+                # sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
+                # sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
+                # sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/noti5-datasetup.apex -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/noti5-usersetup.apex -u $REQUEST_ID
                 # sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
