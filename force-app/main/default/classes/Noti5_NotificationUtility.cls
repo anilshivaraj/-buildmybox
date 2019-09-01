@@ -70,7 +70,7 @@ public class Noti5_NotificationUtility {
         }
         
         List<Notification__c> lNewMessages = new List<Notification__c>();
-        for(Notification__c notify : [Select Id,(Select id from Notification_Recipients__r where Group_Id__c IN :SetOfIds),(Select id from Audience_Responses__r where User__c = :UserInfo.getUserId()),Message__c,Priority__c,Name,Createdby.SmallPhotoUrl ,Createdby.Name from Notification__c where Status__c = 'Notification Sent' ORDER BY CreatedDate DESC]){
+        for(Notification__c notify : [Select Id,(Select id from Notification_Recipients__r where Group_Id__c IN :SetOfIds),(Select id from Audience_Responses__r where User__c = :UserInfo.getUserId()),Message__c,Priority__c,Name,Creator__r.SmallPhotoUrl ,Creator__r.Name from Notification__c where Status__c = 'Notification Sent' ORDER BY CreatedDate DESC]){
             if(notify.Notification_Recipients__r.size() > 0 && notify.Audience_Responses__r.size() == 0){
                 lNewMessages.add(notify);
             }

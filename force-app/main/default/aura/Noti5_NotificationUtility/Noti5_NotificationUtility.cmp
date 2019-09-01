@@ -41,8 +41,8 @@
 
                         <lightning:layoutItem alignmentBump="left">
                             <div class="slds-m-left_small">
-                                <lightning:avatar src="{!message.CreatedBy.SmallPhotoUrl}"
-                                    alternativeText="{!message.CreatedBy.Name}" class="slds-m-right_small" />
+                                <lightning:avatar src="{!message.Creator__r.SmallPhotoUrl}"
+                                    alternativeText="{!message.Creator__r.Name}" class="slds-m-right_small" />
                             </div>
                         </lightning:layoutItem>
                         <lightning:layoutItem>
