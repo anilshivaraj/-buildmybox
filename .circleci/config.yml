@@ -47,8 +47,8 @@ jobs:
           name: Create Scratch Org and Deploy code
           command: |
             sfdx force:org:list --all
-            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username test-gebjnmldprjo@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
-            # sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
+            # sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username test-gebjnmldprjo@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
+            sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
             sfdx force:user:password:generate --targetusername $REQUEST_ID
 
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
@@ -58,17 +58,17 @@ jobs:
                 sfdx force:source:push -u $REQUEST_ID
                 sfdx force:org:display -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
-                # sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
-                # sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
-                # sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/noti5-datasetup.apex -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/noti5-usersetup.apex -u $REQUEST_ID
-                # sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
-                # sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
-                # sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
-                # sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
-                # sfdx force:data:bulk:upsert -s Sector__c -f ~/ci_app/data/sectors.csv -w 1 -i Sector_Id__c -u $REQUEST_ID
-                # sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
+                sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
+                sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
+                sfdx force:data:tree:import --plan ~/ci_app/data/Merchandise__c-plan.json -u $REQUEST_ID
+                sfdx force:data:bulk:upsert -s Sector__c -f ~/ci_app/data/sectors.csv -w 1 -i Sector_Id__c -u $REQUEST_ID
+                sfdx force:data:bulk:upsert -s Fund__c -f ~/ci_app/data/funds.csv -w 1 -i Id -u $REQUEST_ID
                 if [[ $EBIKES == true ]]; then
                   sfdx force:user:permset:assign -n ebikes -u $REQUEST_ID
                 fi
