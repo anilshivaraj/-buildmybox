@@ -48,14 +48,14 @@ jobs:
           command: |
             sfdx force:org:list --all
             # sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username test-gebjnmldprjo@example.com --instanceurl https://test.salesforce.com -a $REQUEST_ID
-            sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 60 --durationdays $NOOFDAYS --setalias $REQUEST_ID
+            sfdx force:org:create --targetdevhubusername secondaryHubOrg --setdefaultusername -s -f ~/ci_app/config/project-scratch-def.json --wait 20 --durationdays $NOOFDAYS --setalias $REQUEST_ID
             sfdx force:user:password:generate --targetusername $REQUEST_ID
 
             export SCRATCH_DETAILS="$(eval sfdx force:org:display -u $REQUEST_ID)"
             echo "$SCRATCH_DETAILS" > SCRATCH_DETAILS.TXT
             echo $SCRATCH_DETAILS
             if [[ $VANILLAORG == false ]]; then
-                sfdx force:source:push -u $REQUEST_ID
+                sfdx force:source:push -u $REQUEST_ID --wait 40
                 sfdx force:org:display -u $REQUEST_ID
                 sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
