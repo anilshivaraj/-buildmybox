@@ -4,8 +4,6 @@ List<User> listUser = new List<User>();
 
 List<Profile> listprofile = [SELECT Id, Name FROM Profile WHERE Name = 'Clinical Specialist' or Name = 'Product Engineer'];
 
-List<PermissionSet> listpermset = [SELECT Id, Name FROM PermissionSet WHERE Name = 'Disability_insurance'];
-
 User u1 = new User(
 	LastName = 'Wanell',
 	FirstName = 'Patton',
@@ -148,9 +146,5 @@ listUser.add(u8);
 
 insert listUser;
 
-PermissionSetAssignment oPerm = new PermissionSetAssignment();
-oPerm.AssigneeId = Userinfo.getuserId();
-oPerm.PermissionSetId = listpermset[0].Id;
 
-Insert oPerm;
 
