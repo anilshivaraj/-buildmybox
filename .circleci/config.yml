@@ -57,12 +57,18 @@ jobs:
             if [[ $VANILLAORG == false ]]; then
                 sfdx force:source:push -u $REQUEST_ID --wait 40
                 sfdx force:org:display -u $REQUEST_ID
+                
+                # Dataload for Dreamproperty
                 sfdx force:apex:execute -f ~/ci_app/data/dreamproperty.apex -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
+                
                 sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
-                sfdx force:apex:execute -f ~/ci_app/data/noti5-datasetup.apex -u $REQUEST_ID
+                # Noti5 User Setup
                 sfdx force:apex:execute -f ~/ci_app/data/noti5-usersetup.apex -u $REQUEST_ID
+                # Noti5 Data Setup
+                sfdx force:apex:execute -f ~/ci_app/data/noti5-datasetup.apex -u $REQUEST_ID
+                
                 sfdx force:data:tree:import --plan ~/ci_app/data/data-plan.json -u $REQUEST_ID       
                 sfdx force:data:tree:import --plan ~/ci_app/data/sample-data-plan.json -u $REQUEST_ID
                 sfdx force:data:tree:import --plan ~/ci_app/data/Harvest_Field__c-plan.json -u $REQUEST_ID
