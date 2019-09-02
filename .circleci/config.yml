@@ -42,8 +42,8 @@ jobs:
           command: |
             echo 'Running tests'
             echo $DEVHUB_USERNAME
-            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username ashivaraj@deloitte.com.qrscprod --instanceurl https://login.salesforce.com --setdefaultdevhubusername -a HubOrg
-            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_SECONDARY --jwtkeyfile assets/server.key --username anil.shivaraj@gmail.com.personal --instanceurl https://login.salesforce.com -a secondaryHubOrg
+            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username $DEVHUB_USERNAME --instanceurl https://login.salesforce.com --setdefaultdevhubusername -a HubOrg
+            # sfdx force:auth:jwt:grant --clientid $CLIENT_ID_SECONDARY --jwtkeyfile assets/server.key --username anil.shivaraj@gmail.com.personal --instanceurl https://login.salesforce.com -a secondaryHubOrg
       - run:
           name: Create Scratch Org and Deploy code
           command: |
