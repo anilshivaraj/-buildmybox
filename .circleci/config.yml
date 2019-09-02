@@ -64,7 +64,6 @@ jobs:
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Account-Contact-Case-Opportunity-plan.json -u $REQUEST_ID
                 sfdx force:data:tree:import -p ~/ci_app/data/export-demo-Lead-plan.json -u $REQUEST_ID
                 
-                sfdx force:data:tree:import -p ~/ci_app/data/notification-plan.json -u $REQUEST_ID
                 # Noti5 User Setup
                 sfdx force:apex:execute -f ~/ci_app/data/noti5-usersetup.apex -u $REQUEST_ID
                 # Noti5 Data Setup
