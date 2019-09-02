@@ -97,9 +97,9 @@ jobs:
                   sfdx force:user:permset:assign -n dreaminvest -u $REQUEST_ID
                 fi
                 
+                # Create Scratch Org details in the newly created scratch org
                 sfdx force:data:record:create -s Scratch_Org_Creds__c -v "Name='ScratchOrgDetails' ReqID__c='$REQUEST_ID' ReqSFID__c='$REQUEST_SFID' Req_ID__c='$REQUEST_URL' Org_Details__c='$SCRATCH_DETAILS'" -u $REQUEST_ID
             fi
+
+            # Update Scratch Org details in Dev hub org
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Scratch_Org_Details__c='$SCRATCH_DETAILS' Status__c='Scratch Org Created'" -u HubOrg
-            # sfdx force:source:convert -r force-app -d testDeploy 
-            # sfdx force:mdapi:deploy -d testDeploy/ -u sandbox -w 20
-            # sfdx force:apex:execute -f assets/loadorgdata.apex -u newscratch
