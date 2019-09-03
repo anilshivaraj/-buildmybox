@@ -34,23 +34,19 @@ jobs:
           name: Create hub key
           command: |
             echo 'make hub key'
-            #- mkdir keys
-            #- echo $HUB_SERVER_KEY_HEX | xxd -r -ps >> keys/hub.key
             openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
-            #- openssl rsa -in keys/hub.key -check -noout
 
       - run:
           name: Auth Hub and Scratch Orgs
           command: |
             echo 'Running tests'
-            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username ashivaraj@deloitte.com.qrscprod --instanceurl https://login.salesforce.com --setdefaultdevhubusername -a HubOrg
+            sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username $DEVHUB_USERNAME --instanceurl https://login.salesforce.com --setdefaultdevhubusername -a HubOrg
             sfdx force:auth:jwt:grant --clientid $CLIENT_ID_SECONDARY --jwtkeyfile assets/server.key --username anil.shivaraj@gmail.com.personal --instanceurl https://login.salesforce.com -a secondaryHubOrg
 
             sfdx force:auth:jwt:grant --clientid $CLIENT_ID_PRIMARY --jwtkeyfile assets/server.key --username $ORG_USERNAME --instanceurl https://test.salesforce.com -a $REQUEST_ID
             export SCRATCH_DIFF="$(eval sfdx force:source:pull -u $REQUEST_ID)"
             echo "$SCRATCH_DIFF" > SCRATCH_DIFF.TXT
             echo $SCRATCH_DIFF
-
 
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Components_Changed__c='$SCRATCH_DIFF' Diff_Status__c='Completed'" -u HubOrg
             sfdx force:data:record:update -s Scratch_Org_Creds__c -w "Name='ScratchOrgDetails'" -v "Components_Changed__c='$SCRATCH_DIFF' Components_Change_Updated__c=true" -u $REQUEST_ID
