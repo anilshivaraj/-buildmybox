@@ -23,7 +23,7 @@
             <componentName>scratchOrgStorageCount</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>devHubOrglimits</componentName>
+            <componentName>scratchOrgLimits</componentName>
         </componentInstances>
         <name>sidebar</name>
         <type>Region</type>
