@@ -19,7 +19,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "SO:ME:FIN:G:ER:PR:IN:T"
-      - checkout
+      # - checkout
       - run:
           name: Download CLI
           command: |
