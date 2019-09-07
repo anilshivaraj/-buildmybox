@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  jq: circleci/jq@x.y.z
 
 general:
 # Uncomment the following to specify only a specific branch
@@ -17,6 +19,7 @@ jobs:
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
     steps:
       - checkout
+      - jq/install
       - add_ssh_keys:
           fingerprints:
             - "2c:dc:c0:c1:a0:65:08:0b:a6:ca:2f:58:3d:e9:79:6f"
@@ -35,8 +38,7 @@ jobs:
             sfdx
             mkdir tmp
             # Install jq
-            sudo apt-get update
-            # apt update && apt -y install jq
+
       - run:
           name: Create hub key
           command: |
