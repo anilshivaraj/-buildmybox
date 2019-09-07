@@ -23,9 +23,11 @@ jobs:
       - run:
           name: Download CLI
           command: |
-            git --version
-            git branch hellooo
-            git push origin hellooo
+            # Install jq
+            apt update && apt -y install jq
+            # git --version
+            # git branch hellooo
+            # git push origin hellooo
             mkdir sfdx
             wget -qO- $DX_CLI_URL | tar xJ -C sfdx --strip-components 1
       - run:
