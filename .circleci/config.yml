@@ -35,7 +35,8 @@ jobs:
             sfdx
             mkdir tmp
             # Install jq
-            apt -y install jq
+            sudo apt-get update
+            # apt update && apt -y install jq
       - run:
           name: Create hub key
           command: |
