@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Download CLI
           command: |
-            echo $PARAM1
+            git --version
             mkdir sfdx
             wget -qO- $DX_CLI_URL | tar xJ -C sfdx --strip-components 1
       - run:
