@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Download CLI
           command: |
-            # git --version
+            git --version
             # git branch hellooo
             # git push origin hellooo
             mkdir sfdx
