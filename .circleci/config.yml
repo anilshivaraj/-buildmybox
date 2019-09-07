@@ -22,10 +22,10 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "2c:dc:c0:c1:a0:65:08:0b:a6:ca:2f:58:3d:e9:79:6f"
+      - jq/install
       - run:
           name: Download CLI
           command: |
-            jq/install
             git --version
             # git branch hellooo
             # git push origin hellooo
