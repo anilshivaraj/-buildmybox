@@ -16,6 +16,9 @@ jobs:
       # and https://developer.salesforce.com/media/salesforce-cli/manifest.json
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
       - checkout
       - run:
           name: Download CLI
