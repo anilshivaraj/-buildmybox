@@ -17,13 +17,10 @@ jobs:
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "2c:dc:c0:c1:a0:65:08:0b:a6:ca:2f:58:3d:e9:79:6f"
       - run:
           name: Download CLI
           command: |
-            git --version
+            echo $PARAM1
             mkdir sfdx
             wget -qO- $DX_CLI_URL | tar xJ -C sfdx --strip-components 1
       - run:
