@@ -1,6 +1,13 @@
-import { LightningElement, api, wire, track } from "lwc";
+import {
+  LightningElement,
+  api,
+  wire,
+  track
+} from "lwc";
 import getScratchOrgChanges from "@salesforce/apex/ScratchOrg_ServiceHandler.getScratchOrgChanges";
-import { ShowToastEvent } from "lightning/platformShowToastEvent";
+import {
+  ShowToastEvent
+} from "lightning/platformShowToastEvent";
 //import checkdiffOrg from "@salesforce/apex/DECI_CreateScratchOrg.checkdiff";
 
 export default class ScratchOrgChanges extends LightningElement {
@@ -15,7 +22,10 @@ export default class ScratchOrgChanges extends LightningElement {
   @track
   listofChanges = [];
 
-  @wire(getScratchOrgChanges) wiredAccount({ error, data }) {
+  @wire(getScratchOrgChanges) wiredAccount({
+    error,
+    data
+  }) {
     var changeslist = [];
     var username;
     if (data) {
@@ -27,7 +37,7 @@ export default class ScratchOrgChanges extends LightningElement {
       else {
         this.lastModifiedDate = data.CreatedDate;
       }
-      data.Components_Changed__c.split(/\r?\n/).forEach(function(element) {
+      data.Components_Changed__c.split(/\r?\n/).forEach(function (element) {
         if (
           !element.startsWith("STATE") &&
           !element.startsWith("===") &&
@@ -45,7 +55,7 @@ export default class ScratchOrgChanges extends LightningElement {
         }
       });
 
-      data.Org_Details__c.split(/\r?\n/).forEach(function(element) {
+      data.Org_Details__c.split(/\r?\n/).forEach(function (element) {
         if (element.includes("Username ")) {
           username = element.replace("Username ", "").trim();
         }
@@ -65,20 +75,4 @@ export default class ScratchOrgChanges extends LightningElement {
     }
   }
 
-  initiatediffcheck() {
-    this.dispatchEvent(
-      new ShowToastEvent({
-        title: "Checking Latest Changes",
-        message:
-          "Checking the changes done on the scratch org. You will get a notification once it is completed.",
-        variant: "success"
-      })
-    );
-
-    /*checkdiffOrg({
-      RequestId: this.reqid,
-      RequestSFId: this.reqsfid,
-      ScratchOrgUserName: this.username
-    });*/
-  }
 }
