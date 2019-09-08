@@ -53,7 +53,8 @@ jobs:
 
             git --version
             git branch $REQUEST_ID
-            sfdx force:source:pull -u $REQUEST_ID -f
+            sfdx force:source:pull -u $REQUEST_ID
+            git commit --allow-empty -m "Trigger deployment"
             git push origin $REQUEST_ID
 
             # sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Components_Changed__c='$SCRATCH_DIFF' Diff_Check__c='false'" -u HubOrg
