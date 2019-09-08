@@ -50,7 +50,7 @@ jobs:
             echo "$SCRATCH_DIFF" > SCRATCH_DIFF.TXT
             echo $SCRATCH_DIFF
 
-            sfdx force:source:pull -u $REQUEST_ID
+            sfdx force:source:pull -u $REQUEST_ID -f
             git --version
             git branch hellooo
             git push origin hellooo
