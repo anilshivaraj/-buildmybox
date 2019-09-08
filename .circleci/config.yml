@@ -1,4 +1,4 @@
-version: 2
+version: 2.0
 orbs:
   jq: circleci/jq@1.6.0
 
@@ -19,7 +19,7 @@ jobs:
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
     steps:
       - checkout
-      - jq/install
+      # - jq/install
       - add_ssh_keys:
           fingerprints:
             - "2c:dc:c0:c1:a0:65:08:0b:a6:ca:2f:58:3d:e9:79:6f"
