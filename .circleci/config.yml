@@ -23,9 +23,6 @@ jobs:
       - run:
           name: Download CLI
           command: |
-            git --version
-            git branch hellooo
-            git push origin hellooo
             mkdir sfdx
             wget -qO- $DX_CLI_URL | tar xJ -C sfdx --strip-components 1
       - run:
@@ -52,6 +49,11 @@ jobs:
             export SCRATCH_DIFF="$(eval sfdx force:source:pull -u $REQUEST_ID)"
             echo "$SCRATCH_DIFF" > SCRATCH_DIFF.TXT
             echo $SCRATCH_DIFF
+
+            sfdx force:source:pull -u $REQUEST_ID
+            git --version
+            git branch hellooo
+            git push origin hellooo
 
             sfdx force:data:record:update -s Request_Scratch_Org__c -i $REQUEST_SFID -v "Components_Changed__c='$SCRATCH_DIFF' Diff_Check__c='false'" -u HubOrg
             sfdx force:data:record:update -s Scratch_Org_Creds__c -w "Name='ScratchOrgDetails'" -v "Components_Changed__c='$SCRATCH_DIFF' Components_Change_Updated__c=true" -u $REQUEST_ID
