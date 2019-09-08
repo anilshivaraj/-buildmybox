@@ -1,4 +1,4 @@
-version: 2.0
+version: 2
 
 general:
 # Uncomment the following to specify only a specific branch
@@ -16,10 +16,10 @@ jobs:
       # and https://developer.salesforce.com/media/salesforce-cli/manifest.json
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
     steps:
+      - checkout
       - add_ssh_keys:
           fingerprints:
             - "2c:dc:c0:c1:a0:65:08:0b:a6:ca:2f:58:3d:e9:79:6f"
-      - checkout
       - run:
           name: Download CLI
           command: |
