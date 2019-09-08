@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  jq: circleci/jq@1.6.0
 
 general:
 # Uncomment the following to specify only a specific branch
