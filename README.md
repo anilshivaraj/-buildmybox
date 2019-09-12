@@ -1,58 +1,14 @@
-# Salesforce App
+# BuildMyBox - deletescratchorg
 
-This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
+The [Buildmybox App](http://www.buildmy-box.com/) includes various functionalities, one of them is to delete the scratch org once the changes are done and migrated. This is required to avoid reaching the limit for active scratch orgs.
 
-## Part 1: Choosing a Development Model
+This branch includes th logic for the **Scratch Org Deletion** functionality.
 
-There are two types of developer processes or models supported in Salesforce Extensions for VS Code and Salesforce CLI. These models are explained below. Each model offers pros and cons and is fully supported.
+### Delete Scratch Org
 
-### Package Development Model
+- Open **Buildmybox App** in salesforce and go the `Request Scratch Org` record related to the scratch org which you no longer require.
 
-The package development model allows you to create self-contained applications or libraries that are deployed to your org as a single package. These packages are typically developed against source-tracked orgs called scratch orgs. This development model is geared toward a more modern type of software development process that uses org source tracking, source control, and continuous integration and deployment.
+- Go to the `Login Details` section and click on 'Delete Org' button. This invokes the CI job from `.circleci/config.yml` and the job will delete the specific scratch org.
 
-If you are starting a new project, we recommend that you consider the package development model. To start developing with this model in Visual Studio Code, see [Package Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/package-development-model). For details about the model, see the [Package Development Model](https://trailhead.salesforce.com/en/content/learn/modules/sfdx_dev_model) Trailhead module.
+![]https://lh3.googleusercontent.com/aO9v9lN3py64oIkS_bjcFxWRu_0x2qIbl95k8tVzdFz7YGTpnjnmxMyeQb7B6lcrM4PemBXUDPZq9tGf4qztWAWCRMkQtgrQ3O1b3BMPuhmAdicGy2W6xvq-Y3h_JI6HA1nAxNKkxDnoCgBJG5C15SrA2fpvGM6GruudFcyflQLTlxN_kTiJo5TrHCvGvfkRyIGqv2jlLi_xuk-eZljn_4mcJweXwdHPbFREi0uCLD1h86fxvbEyXQkUyRtX-mRCD3MamMDNXUO5GBho0bx3i-MpAeWnWqn-iREFUouHkxaE4xm0bystSZaSYeZY8AoQuoCdXNHJx1jPFUccL4L16-kDD-7X-QYsgsuwXydvrPC-lojPxOzinFUlW_U4Bazzx8MO3vunRVHsOhQmGbbiobNxxPcfBFopxnGkJuvrd8GpyrScBX-HaClBeQwTU0lL-tGgzJ7z9RWffmnpizqmDL4bSofbiKPP5HlXVTfDJlehSY7Hnef8ec3ycyRBLf62TY0Y8_N9wJfHm75w-vJh4VPkRGg0R1RQZ3GL2SbJ7y_foQolalN81vcKdmhmMdNUcq2HOJZ3pAcLO-kZZSn892c7W7ePyleipX4c6vEN0fTNbkfgiPFpvLYvATf6K704coeOSZt85KC7KuNJEIS41dvP9rUEoanPA8aKwNpq5sYJQkUwWZvAHCXDDow23iVWJUq6fH8MRTOqITrtpUDCm8THcFJIlc1VnihyGu2-VLp48Uh6=w1644-h577-no)
 
-If you are developing against scratch orgs, use the command `SFDX: Create Project` (VS Code) or `sfdx force:project:create` (Salesforce CLI)  to create your project. If you used another command, you might want to start over with that command.
-
-When working with source-tracked orgs, use the commands `SFDX: Push Source to Org` (VS Code) or `sfdx force:source:push` (Salesforce CLI) and `SFDX: Pull Source from Org` (VS Code) or `sfdx force:source:pull` (Salesforce CLI). Do not use the `Retrieve` and `Deploy` commands with scratch orgs.
-
-### Org Development Model
-
-The org development model allows you to connect directly to a non-source-tracked org (sandbox, Developer Edition (DE) org, Trailhead Playground, or even a production org) to retrieve and deploy code directly. This model is similar to the type of development you have done in the past using tools such as Force.com IDE or MavensMate.
-
-To start developing with this model in Visual Studio Code, see [Org Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/org-development-model). For details about the model, see the [Org Development Model](https://trailhead.salesforce.com/content/learn/modules/org-development-model) Trailhead module.
-
-If you are developing against non-source-tracked orgs, use the command `SFDX: Create Project with Manifest` (VS Code) or `sfdx force:project:create --manifest` (Salesforce CLI) to create your project. If you used another command, you might want to start over with this command to create a Salesforce DX project.
-
-When working with non-source-tracked orgs, use the commands `SFDX: Deploy Source to Org` (VS Code) or `sfdx force:source:deploy` (Salesforce CLI) and `SFDX: Retrieve Source from Org` (VS Code) or `sfdx force:source:retrieve` (Salesforce CLI). The `Push` and `Pull` commands work only on orgs with source tracking (scratch orgs).
-
-## The `sfdx-project.json` File
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-The most important parts of this file for getting started are the `sfdcLoginUrl` and `packageDirectories` properties.
-
-The `sfdcLoginUrl` specifies the default login URL to use when authorizing an org.
-
-The `packageDirectories` filepath tells VS Code and Salesforce CLI where the metadata files for your project are stored. You need at least one package directory set in your file. The default setting is shown below. If you set the value of the `packageDirectories` property called `path` to `force-app`, by default your metadata goes in the `force-app` directory. If you want to change that directory to something like `src`, simply change the `path` value and make sure the directory you’re pointing to exists.
-
-```json
-"packageDirectories" : [
-    {
-      "path": "force-app",
-      "default": true
-    }
-]
-```
-
-## Part 2: Working with Source
-
-For details about developing against scratch orgs, see the [Package Development Model](https://trailhead.salesforce.com/en/content/learn/modules/sfdx_dev_model) module on Trailhead or [Package Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/package-development-model).
-
-For details about developing against orgs that don’t have source tracking, see the [Org Development Model](https://trailhead.salesforce.com/content/learn/modules/org-development-model) module on Trailhead or [Org Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/org-development-model).
-
-## Part 3: Deploying to Production
-
-Don’t deploy your code to production directly from Visual Studio Code. The deploy and retrieve commands do not support transactional operations, which means that a deployment can fail in a partial state. Also, the deploy and retrieve commands don’t run the tests needed for production deployments. The push and pull commands are disabled for orgs that don’t have source tracking, including production orgs.
-
-Deploy your changes to production using [packaging](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_dev2gp.htm) or by [converting your source](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_source.htm#cli_reference_convert) into metadata format and using the [metadata deploy command](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_mdapi.htm#cli_reference_deploy).
