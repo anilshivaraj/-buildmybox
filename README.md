@@ -11,7 +11,6 @@ Make sure to complete all the manual steps mentioned in the [Buildmybox site](ht
 2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-circleci.git`
 
 3) Encrypt and store the server.key generated above using the instructions below.
-> "Circle does a nice job of allowing you to set environment variables inside the UI in a protected way." (attribution to [Kevin O'Hara](https://github.com/kevinohara80))
 
 - First, we will generate a key and initializtion vector (iv) to encrypt your server.key file locally.  The key and iv will be used by Circleci to decrypt your server key in the build environment.
 
