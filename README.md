@@ -4,6 +4,8 @@ This contains the components and data that will be deployed to the scratch Orgs 
 
 Make sure to complete all the manual steps mentioned in the [Buildmybox site](http://www.buildmy-box.com/) for this repository to work.
 
+![](https://lh3.googleusercontent.com/jSfc1btj4PCOJMyJv1M9low7mK4yVW-69t6UI2yHWuDV0kZ5eLDwa6vummy7-ix9WTxa-Qlmpq8NIVrbYV08kgD8jybKdpRzjzPq0SC8mFK1U_R0mTjgRMmssABUH8pi2sYmYDe2xcZP_kEtKX_r90rFqQvv9hFIxD_aCKKY8cV3jS8rFuk2-_2BYb-aRyHx6b5IHpK-Vmy_mQ9N9Lk1YqAZ6CUwQcK0uRZZL6tsIDxeIRej5_4dy7CBxMQpAzvMPv86SZeGERGGCNw3C45Xhn82JcwcBm-IC7lFTGn2reBJODasiIp4r9NfzM7aAxrD9fMZXXZsaW0be9C8cp3bM9yv8kdX5ohjOj6axINSCO9L-OZj-BHe5u8zxhDTQtdxI3sEkQl6WMJshgxD-Ki5LNI3YajVBH7LDEolrlhJGFnTTz8lq0jyBCrE-Bja6Z32T4U6Ve7HwCp-ZkJoycUkvvIMlOuV3cvde3LXxPhFeMXAaYOJs2g5X_ncnoqznMlEWNoAObd-luwA9A26ad3eKD7FKfmrzNiXszC5VwdlBFb4tEV0iLppv8-kV9GfVGsGbRfPPRu0gsr_PUw-5T03RToXxq41bKsocWIzSY3Sc7zMABKlxpVp0DmadJ8nG3Pba-h-TsvohmnUiuJpWTzEk-tzO25Kd-7ZkFsixW3efI6cuFlDXqsjjg2Z=w1655-h903-no)
+
 ## Getting Started
 
 1) [Fork](http://help.github.com/fork-a-repo/) this repo into your github account using the fork link at the top of the page.
