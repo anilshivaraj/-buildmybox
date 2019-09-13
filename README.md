@@ -10,42 +10,26 @@ Make sure to complete all the manual steps mentioned in the [Buildmybox site](ht
 
 2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-circleci.git`
 
-3) Encrypt and store the server.key generated above using the instructions below.
+3) From you JWT-Based connected app on Salesforce, retrieve the generated `Consumer Key` and store in a Circleci environment variable named `HUB_CONSUMER_KEY` using the Circleci UI.
 
-    - First, we will generate a key and initializtion vector (iv) to encrypt your server.key file locally.  The key and iv will be used by Circleci to decrypt your server key in the build environment.
+4) Store the user name that you use to access your Dev Hub in a Circleci environment variable named `HUB_SFDX_USER` using the Circleci UI. Note that this username is the username that you use to access your Dev Hub.
 
-    ```bash
-    $ openssl enc -aes-256-cbc -k <passphrase here> -P -md sha1 -nosalt
-      key=E5E9FA1BA31ECD1AE84F75CAAA474F3A663F05F412028F81DA65D26EE56424B2
-      iv =E93DA465B309C53FEC5FF93C9637DA58
-    ```
-
-    > Make note of the `key` and `iv` values output to the screen. You will use the values following `key=` and `iv =` to encrypt your `server.key` in the next step.
-
-    - Encrypt the `server.key` using the newly generated `key` and `iv` values.  The `key` and `iv` values *should* only be used once, don't use them to encrypt more than the `server.key`.  While you can re-use this pair to encrypt other things, it is considered a security violation to do so.  Every time you run the command above, a new `key` and `iv` value will be generated.  IE, you can not regenerated the same pair, so if you lose these values you will need to generated new ones and encrypt again.
-
-    ```bash
-    openssl enc -nosalt -aes-256-cbc -in assets/server.key -out assets/server.key.enc -base64 -K <key from above> -iv <iv from above>
-    ```
- 
-    - Store the `key`, `iv` and contents of `server.key.enc` as protected environment variables in the Circleci UI. These valus are considered *secret* so please treat them as such.
-
-4) From you JWT-Based connected app on Salesforce, retrieve the generated `Consumer Key` and store in a Circleci environment variable named `HUB_CONSUMER_KEY` using the Circleci UI.
-
-5) Store the user name that you use to access your Dev Hub in a Circleci environment variable named `HUB_SFDX_USER` using the Circleci UI. Note that this username is the username that you use to access your Dev Hub.
-
-6) Store the `key` and `iv` values used above in Circleci environment variables named `DECRYPTION_KEY` and `DECRYPTION_IV` respectively.  When finished setting environment variables you environment variables setup screen should look like the one below.
+5) Store the `key` and `iv` values used above in Circleci environment variables named `DECRYPTION_KEY` and `DECRYPTION_IV` respectively.  When finished setting environment variables you environment variables setup screen should look like the one below.
 
 ![alt text](assets/images/screenshot-194.png)
 
-7) IMPORTANT! Remove your `server.key`: `rm assets/server.key`, you should never store keys or certificates in a public place.
+6) IMPORTANT! Remove your `server.key`: `rm assets/server.key`, you should never store keys or certificates in a public place.
 
 Now when you commit and push a change, your change will kick off a Circle CI build.
 
-## Contributing to the Repository ###
+## Team ###
 
-If you find any issues or opportunities for improving this repository, fix them!  Feel free to contribute to this project by [forking](http://help.github.com/fork-a-repo/) this repository and make changes to the content.  Once you've made your changes, share them back with the community by sending a pull request. Please see [How to send pull requests](http://help.github.com/send-pull-requests/) for more information about contributing to Github projects.
-
-## Reporting Issues ###
-
-If you find any issues with this demo that you can't fix, feel free to report them in the [issues](https://github.com/forcedotcom/sfdx-circleci/issues) section of this repository.
+<table>
+    <tr>
+        <td width="200px"><img src="https://lh3.googleusercontent.com/mljlcYpi4qFYdVnEjRwqW-gm48ikcnOgCKAP9i8L2NK7HZgdS_muRhMhrelyRAW1LD7Cjj8KczhG-KCwc5hTGxxIYhezgYy16Z4DZBDlgCjyvJdPDuky8XGBSHJSn4v5lenI3LGtG-m8JqJYWQcwpA3ClJI5LcqZIJcdKM5Q6VL_FB5YRmDkThlfXx-o_UhzqBx46FcPE2ccvRmQvLNYunXPnzElh5o8jDTQTV081_PHhfmzxRsykNWXowBJsBLL1Vee-Nu1gzF5qdlEdP_9Yfl2NobMbFf06dyqt-iddEjnN6CRIr7kjunkhPdi3_GcYsPAQRNL7kn5bDeOJ_dVvfmRUfI6ytNhpsMqtVWtb1tFq4l2FJTJTRkoT_H-WPokqqTySEzSU7qYYoxEgHx0gEwSWT8ywBFDm_FRGeLcAQpQe3FLqMUJDk_btTGg4kcW9GCGNCicNlgZdRbvfbRfA9E88SSw7rfsDO6tMN0dUKk46kcJWMCqtGaPPRfqqF0XFt3RaxI2o_3BsJ82oijiDKPfUFyCRR0F6oJtDLCmaOM5TqDsZt2Tal4kmiLl-BYZV4tLj0a-F_w-4QP_UkIWDnOoaH7RWp_vlaGgjWiKFZhJh1g4GvDieKzjYGoqrECWQtAvVXB8A_BKz0QQ4uTUtgFYmfCNFrE-PX85IPy6MsHvvx1EIK7-u5vMOz_Qj4cduwdDKpGLSbm4agP7bIJ7gwXPv7c7etwWzZNXZkwVKL2lbm2T=w159-h152-no" width="180" height="180"/> </td>
+        <td> Anil Shivaraj Specialist Master (Customer & M, NY office) <br> Salesforce certified architect with 17+ salesforce certifications and extensive background in analytics and mobile platform. Worked with leading clients in Pharma and Insurance sector, leading multiple salesforce projects involving Devops and Agile delivery <br> Email : ashivaraj@deloitte.com</td>
+    <tr>
+        <td width="200px"><img src="https://lh3.googleusercontent.com/wwtE2FDueAHepwKBF97BcLLC4IR-_TfJAf6LVCZ5KL9eimEZvqqA0B4wHDZLnOa4-wQ3O64I-7y4OB0vXMpdHxOHeTbWUWfQxI_JU22SJ1WwuqezEfEB1Vmrtfpx4MSKMPSX-7oRRGU6qurb32lnkbBFoilXu1OfubGBoV2BqPdFNSRbdqFJ1qluJCobx86IO1clmKIsrPpZ8AJEpUKX1biaeSX8-a3QtPZPj-knbrueJG7y-LGWbx-cJMMMtu5yfhUyg_mLi3mdhD7lLFdcK3DS61JbKllbx1-BffQrM9UAMMJPPh5H6ingHvfGCl0I8vcxUXdU3-R2OQ0J6ae333_h7dwa2yE39P6EC-3crf_nXvoANWLlHLeWP7xf4AyGBbin9NMhKg3yow773OTBz-NeKAMkiOt894h6j43J4_ZDyVVODVF6YE6U4xZllw7xaR2K1JjS9TJI9nbwvly5RQReV_bN5sfmjYUsA-zyWNzIy1f-GY4MlJqleWiPqSKTjlgqqSs-IsUikDoxWYtybnVGjKQ9QVke5uE-zk21Hw3QKesnoQXh60jBtwt8slllnTT502zDd5J8rhigaCOCLnkma1zb0DzltdAp46Ib97PHFZCYsRD8269nHNjbV8jXWzEeAwebEqmdhR49XlSCsPppgNQDsQPbNzSu67eIbi-cnYC9xCKxpnUq3FSpdq7WsDuqURwFu1-mu6JmYmEBzpLDb-bKNXufsJSGQ-c8imYBpXaN=w252-h250-no" width="180" height="180" /></td>
+        <td>Jaswinder Singh Consultant (Customer & M, Bengaluru office) <br> Salesforce certified developer with 4.5 years of IT experience in salesforce. Worked extensively on Agile based sales and service cloud projects involving complex integrations. Experienced in both classic and Lightning development. <br> Email : jaswinsingh@deloitte.com</td>
+    </tr>
+</table>
