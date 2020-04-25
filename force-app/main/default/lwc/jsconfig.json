@@ -258,14 +258,26 @@
             "c/navToRelatedList": [
                 "navToRelatedList/navToRelatedList.js"
             ],
+            "c/noTi5": [
+                "noTi5/noTi5.js"
+            ],
+            "c/noTi5AddMultipleAudience": [
+                "noTi5AddMultipleAudience/noTi5AddMultipleAudience.js"
+            ],
+            "c/noTi5Chart": [
+                "noTi5Chart/noTi5Chart.js"
+            ],
+            "c/noTi5Lookup": [
+                "noTi5Lookup/noTi5Lookup.js"
+            ],
+            "c/noTi5SelectedUserDetails": [
+                "noTi5SelectedUserDetails/noTi5SelectedUserDetails.js"
+            ],
             "c/orderBuilder": [
                 "orderBuilder/orderBuilder.js"
             ],
             "c/orderItemTile": [
                 "orderItemTile/orderItemTile.js"
-            ],
-            "c/orgStorageCountHome": [
-                "orgStorageCountHome/orgStorageCountHome.js"
             ],
             "c/paginator": [
                 "paginator/paginator.js"
@@ -345,6 +357,9 @@
             "c/scratchOrgDetailsHome": [
                 "scratchOrgDetailsHome/scratchOrgDetailsHome.js"
             ],
+            "c/scratchOrgStorageCount": [
+                "scratchOrgStorageCount/scratchOrgStorageCount.js"
+            ],
             "c/searchBar": [
                 "searchBar/searchBar.js"
             ],
@@ -392,21 +407,6 @@
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
-            ],
-            "c/noTi5": [
-                "noTi5/noTi5.js"
-            ],
-            "c/noTi5AddMultipleAudience": [
-                "noTi5AddMultipleAudience/noTi5AddMultipleAudience.js"
-            ],
-            "c/noTi5Chart": [
-                "noTi5Chart/noTi5Chart.js"
-            ],
-            "c/noTi5Lookup": [
-                "noTi5Lookup/noTi5Lookup.js"
-            ],
-            "c/noTi5SelectedUserDetails": [
-                "noTi5SelectedUserDetails/noTi5SelectedUserDetails.js"
             ]
         }
     },
